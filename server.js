@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({
     extended:true
 }));
 app.use(bodyParser.json());
-var port = 80;
+var port = 3000;
 var router = express.Router();
 mongoose.connect("mongodb://localhost:27017/testDB");
 app.use(cors());
