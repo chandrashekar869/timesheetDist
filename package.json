@@ -1,0 +1,17 @@
+{
+    "name": "Timesheet-REST-API",
+    "main": "server.js",
+    "version": "0.0.1",
+    "author": {
+        "name": "AnytimeLearn",
+        "email": "iwanttolearn@anytimelearn.in",
+        "url": "http://www.anytimelearn.in"
+    },
+    "dependencies": {
+        "express": "~4.16.3",
+        "body-parser": "~1.18.2",
+        "cors": "~2.8.4",
+        "mongoose": "~5.0.14",
+        "jsonwebtoken": "~8.2.1"
+    }
+}
