@@ -2,9 +2,7 @@ var mongoose=require("mongoose");
 var Schema=mongoose.Schema;
 var adminSchema=new Schema({
     "Departments":Array,
-    "Projects":Array,
-    "Stages":Array,
-    "Tasks":Array
+    "DepartmentList":Array
 },{
     collection:"adminCollection"
 });

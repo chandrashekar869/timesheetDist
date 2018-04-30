@@ -31,7 +31,28 @@ router.use(function(req,res,next){
 router.route("/user")
 //CREATE OR ADD A USER TO THE DB
 .post(function(req,res){
-    var p = new model();
+    var userData=JSON.parse(req.body.userData);
+    var obj={
+        "data" : new Array(),
+        "name" : userData.name,
+        "emailId" :userData.email,
+        "phone" :userData.mobile,
+        "password" : userData.password,
+        "department" : userData.selectedDepartment,
+        "role" : {
+            "name" : "User",
+            "canApprove" : (userData.canApproved?1:0)
+        }
+    };
+
+model.collection.insert(obj,function(err,record){
+    if (err) {
+        res.status(500).send(err);
+     } 
+     else
+     res.send({ message: record }); 
+});
+/*    var p = new model();
     p.name=req.body.name,
     p.emailId=req.body.emailId,
     p.phone=req.body.phone,
@@ -46,12 +67,35 @@ router.route("/user")
         } 
         res.send({ message: 'Product Created ' })
     console.log("Created");
-    });
+    });*/
 })
 
 //GET ALL USER DATA
-.get(function(req,res){
-    if(typeof(req.query.condition!="undefined")){
+.get(verifyToken,function(req,res){
+    if(typeof(req.query.model)!="undefined" && req.query.model=="Report"){
+        adminModel.find(JSON.parse(req.query.condition),function(err,users){
+            if(err)
+            res.status(500).send(err);
+            else
+            {
+                model.find(JSON.parse(req.query.condition),function(err,userData){
+                    if(err)
+                    res.send(err);
+                    else
+                    res.send({"admin":users,"userData":userData});
+                });        
+            }
+        });
+    }
+    else if(typeof(req.query.model)!="undefined" && req.query.model=="Admin"){
+        adminModel.find(JSON.parse(req.query.condition),function(err,users){
+            if(err)
+            res.status(500).send(err);
+            else
+            res.send(users);
+        });
+    }
+    else if(typeof(req.query.condition!="undefined")){
         model.find(JSON.parse(req.query.condition),function(err,users){
             if(err)
             res.send(err);
@@ -66,18 +110,22 @@ router.route("/user")
 
 //update user data
 .put(function(req,res){
-    model.findOne(req.body.condition,function(err,data){
+    model.findOne(JSON.parse(req.body.condition),function(err,data){
         if(err)
         res.send(err);
         else 
-        {   
+        console.log(data);
+        {   if(data!=null){
             data[req.body.param]=req.body.data;
             data.save(function(err){
                 if(err)
                 res.send(err);
                 else
-                res.send(data);
+                res.json("SUCCESS");
             });
+            }
+            else
+            res.status(500).send("NOT_EXISTS");
         }
     });
 })
@@ -110,6 +158,268 @@ router.route("/login")
         }
     });
 });
+
+router.route("/manageDepartment")
+.put(function(req,res){
+    adminModel.findOne(JSON.parse(req.body.condition),function(err,data){
+        if(err)
+        res.status(500).send(err);
+        else 
+        {   
+            if(data["DepartmentList"].indexOf(req.body.departmentName)==-1)
+            {
+                var obj={};
+                obj[req.body.departmentName]={"Projects" : [],"Stages" : [],"Tasks" : []};
+                data["DepartmentList"].push(req.body.departmentName);
+                data["Departments"].push(obj);
+                console.log(data);
+                data.markModified("Departments");
+                data.markModified("DepartmentList");
+                data.save(function(err){
+                    if(err)
+                    res.status(500).send(err);
+                    else
+                    res.send(data);
+               });
+            }
+            else
+            res.status(500).send("DUPLICATE_ENTRY");
+        }
+    });
+})
+.delete(function(req,res){
+    if(typeof(req.query.departmentName)!="undefined"){
+    adminModel.findOne(JSON.parse(req.query.condition),function(err,data){
+        if(err)
+        res.status(500).send(err);
+        else 
+        {   
+            if(data["DepartmentList"].indexOf(req.query.departmentName)!=-1)
+            {
+                data["DepartmentList"].splice(data["DepartmentList"].indexOf(req.query.departmentName),1);
+                data["Departments"].map(function(element,index){
+                   if(element.hasOwnProperty(req.query.departmentName))
+                   data["Departments"].splice(index,1);
+                });
+                console.log(data);
+                data.markModified("Departments");
+                data.markModified("DepartmentList");
+                data.save(function(err){
+                    if(err)
+                    res.status(500).send(err);
+                    else
+                    res.send(data);
+               });
+            }
+            else
+            res.status(500).send("NOT_EXISTS");
+        }
+    });
+}
+});
+
+router.route("/projectAdmin")
+.put(function(req,res){
+    adminModel.findOne({},function(err,data){
+    if(err)
+    res.status(500).send(err);
+    else{
+        var reqData=JSON.parse(req.body.projectData);
+        if(data["DepartmentList"].indexOf(reqData.selectedDepartment)!=-1){
+            data["Departments"].map(function(element,index){
+                if(element.hasOwnProperty(reqData.selectedDepartment))
+                {
+                    if(data["Departments"][index][reqData.selectedDepartment]["Projects"].indexOf(reqData.projectName)==-1){
+                        data["Departments"][index][reqData.selectedDepartment]["Projects"].push(reqData.projectName);
+                        data.markModified("Departments");
+                        data.save(function(err){
+                            if(err)
+                            res.status(500).send(err);
+                            else
+                            res.send({"data":data,"indexOf":index});
+                       });
+                    }
+                    else
+                    res.status(500).send("DUPLICATE_ENTRY");
+                }
+            });
+        }
+        else
+        res.status(500).send("Department not found");
+    }
+    });
+})
+.delete(function(req,res){
+    if(typeof(req.query.projectData)!="undefined"){
+        adminModel.findOne({},function(err,data){
+            if(err)
+            res.status(500).send(err);
+            else{
+                var reqData=JSON.parse(req.query.projectData);
+                if(data["DepartmentList"].indexOf(reqData.selectedDepartment)!=-1){
+                    data["Departments"].map(function(element,index){
+                        if(element.hasOwnProperty(reqData.selectedDepartment))
+                        {
+                            var projectIndex=data["Departments"][index][reqData.selectedDepartment]["Projects"].indexOf(reqData.projectName);
+                            if(projectIndex!=-1){
+                                data["Departments"][index][reqData.selectedDepartment]["Projects"].splice(projectIndex,1);
+                                data.markModified("Departments");
+                                data.save(function(err){
+                                    if(err)
+                                    res.status(500).send(err);
+                                    else
+                                    res.send({"data":data,"indexOf":index});
+                               });
+                            }
+                            else
+                            res.status(500).send("NOT_EXISTS");
+                        }
+                    });
+                }
+                else
+                res.status(500).send("Department not found");
+            }
+            });
+    }
+});
+
+router.route("/stageAdmin")
+.put(function(req,res){
+    adminModel.findOne({},function(err,data){
+    if(err)
+    res.status(500).send(err);
+    else{
+        var reqData=JSON.parse(req.body.stageData);
+        console.log(reqData);
+        if(data["DepartmentList"].indexOf(reqData.selectedDepartment)!=-1){
+            data["Departments"].map(function(element,index){
+                if(element.hasOwnProperty(reqData.selectedDepartment))
+                {
+                    if(data["Departments"][index][reqData.selectedDepartment]["Stages"].indexOf(reqData.stageName)==-1){
+                        data["Departments"][index][reqData.selectedDepartment]["Stages"].push(reqData.stageName);
+                        data.markModified("Departments");
+                        data.save(function(err){
+                            if(err)
+                            res.status(500).send(err);
+                            else
+                            res.send({"data":data,"indexOf":index});
+                       });
+                    }
+                    else
+                    res.status(500).send("DUPLICATE_ENTRY");
+                }
+            });
+        }
+        else
+        res.status(500).send("Department not found");
+    }
+    });
+})
+.delete(function(req,res){
+    if(typeof(req.query.stageData)!="undefined"){
+        adminModel.findOne({},function(err,data){
+            if(err)
+            res.status(500).send(err);
+            else{
+                var reqData=JSON.parse(req.query.stageData);
+                console.log(reqData);
+                if(data["DepartmentList"].indexOf(reqData.selectedDepartment)!=-1){
+                    data["Departments"].map(function(element,index){
+                        if(element.hasOwnProperty(reqData.selectedDepartment))
+                        {  console.log(element);
+                            var stageIndex=data["Departments"][index][reqData.selectedDepartment]["Stages"].indexOf(reqData.stageName);
+                            if(stageIndex!=-1){
+                                console.log(data["Departments"][index]);
+                                data["Departments"][index][reqData.selectedDepartment]["Stages"].splice(stageIndex,1);
+                                data.markModified("Departments");
+                                data.save(function(err){
+                                    if(err)
+                                    res.status(500).send(err);
+                                    else
+                                    res.send({"data":data,"indexOf":index});
+                               });
+                            }
+                            else
+                            res.status(500).send("NOT_EXISTS");
+                        }
+                    });
+                }
+                else
+                res.status(500).send("Department not found");
+            }
+            });
+    }
+});
+
+router.route("/taskAdmin")
+.put(function(req,res){
+    adminModel.findOne({},function(err,data){
+    if(err)
+    res.status(500).send(err);
+    else{
+        var reqData=JSON.parse(req.body.taskData);
+        console.log(reqData);
+        if(data["DepartmentList"].indexOf(reqData.selectedDepartment)!=-1){
+            data["Departments"].map(function(element,index){
+                if(element.hasOwnProperty(reqData.selectedDepartment))
+                {
+                    if(data["Departments"][index][reqData.selectedDepartment]["Tasks"].indexOf(reqData.taskName)==-1){
+                        data["Departments"][index][reqData.selectedDepartment]["Tasks"].push(reqData.taskName);
+                        data.markModified("Departments");
+                        data.save(function(err){
+                            if(err)
+                            res.status(500).send(err);
+                            else
+                            res.send({"data":data,"indexOf":index});
+                       });
+                    }
+                    else
+                    res.status(500).send("DUPLICATE_ENTRY");
+                }
+            });
+        }
+        else
+        res.status(500).send("Department not found");
+    }
+    });
+})
+.delete(function(req,res){
+    if(typeof(req.query.taskData)!="undefined"){
+        adminModel.findOne({},function(err,data){
+            if(err)
+            res.status(500).send(err);
+            else{
+                var reqData=JSON.parse(req.query.taskData);
+                console.log(reqData);
+                if(data["DepartmentList"].indexOf(reqData.selectedDepartment)!=-1){
+                    data["Departments"].map(function(element,index){
+                        if(element.hasOwnProperty(reqData.selectedDepartment))
+                        {  console.log(element);
+                            var taskIndex=data["Departments"][index][reqData.selectedDepartment]["Tasks"].indexOf(reqData.taskName);
+                            if(taskIndex!=-1){
+                                console.log(data["Departments"][index]);
+                                data["Departments"][index][reqData.selectedDepartment]["Tasks"].splice(taskIndex,1);
+                                data.markModified("Departments");
+                                data.save(function(err){
+                                    if(err)
+                                    res.status(500).send(err);
+                                    else
+                                    res.send({"data":data,"indexOf":index});
+                               });
+                            }
+                            else
+                            res.status(500).send("NOT_EXISTS");
+                        }
+                    });
+                }
+                else
+                res.status(500).send("Department not found");
+            }
+            });
+    }
+});
+
+
 
 router.route("/updateTimeSheet")
 .put(verifyToken,function(req,res){
@@ -199,12 +509,12 @@ router.route("/getInitData")
         else{
             try{
                 if(data2==null || data2.length==0)
-                res.sendStatus(500).send("ERROR");
+                res.status(500).send("ERROR");
                 else{
                     res.send({"timesheetData":data2[0]["data"],"data":data[0]});         
                 }
             }catch(err){
-                res.sendStatus(500).send("ERROR");
+                res.status(500).send("ERROR");
             }
         }
          });
@@ -239,7 +549,7 @@ function approverForAll(req,res,data,approve,reject){
 if(data.length>=0){
 model.findById(data[0]["_id"],function(err,result){
     if(err)
-    res.sendStatus(500).send("ERROR");
+    res.status(500).send("ERROR");
     else{
     data.map(function(element,i){
     result.data[element.index]["Approved"]=approve;
@@ -262,7 +572,7 @@ model.findById(data[0]["_id"],function(err,result){
 });
 }
 else
-res.sendStatus(500).send("ERROR");
+res.status(500).send("ERROR");
 }
 function approver(req,res,data,approve,reject){
     var toUpdateApproved="data."+data[0]["index"]+".Approved";
@@ -275,18 +585,18 @@ function approver(req,res,data,approve,reject){
         obj[toUpdateRejected]=reject;
         model.update({"_id":data[0]["_id"]},{$set:obj},function(err,raw){
             if(err)
-            res.sendStatus(500).send("ERROR");
+            res.status(500).send("ERROR");
             else{
                 if(raw["ok"]==1){
                     model.find({"department":req.body.department},function(err,allAdata){
                         if(err)
-                        res.sendStatus(500).send("ERROR");
+                        res.status(500).send("ERROR");
                         else
                         res.send(allAdata);
                     });
                 }
                 else
-                res.sendStatus(500).send("ERROR");
+                res.status(500).send("ERROR");
             }
         });}
 }
