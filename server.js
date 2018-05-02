@@ -39,6 +39,7 @@ router.route("/user")
         "phone" :userData.mobile,
         "password" : userData.password,
         "department" : userData.selectedDepartment,
+        "Approver":userData.Approver,
         "role" : {
             "name" : "User",
             "canApprove" : (userData.canApproved?1:0)
@@ -50,7 +51,7 @@ model.collection.insert(obj,function(err,record){
         res.status(500).send(err);
      } 
      else
-     res.send({ message: record }); 
+     res.send({ message: record,data:obj }); 
 });
 /*    var p = new model();
     p.name=req.body.name,
@@ -454,7 +455,7 @@ router.route("/updateTimeSheet")
                 data=data[0];
                 data["data"].some((element,index) => {
                     console.log(element.EntryForDate,reqData.EntryForDate);
-                    if(element.EntryForDate==reqData.EntryForDate && element.ProjectName==reqData.ProjectName && element.StageName==reqData.StageName && element.Taskname==reqData.Taskname && element.Rejected==1)
+                    if(element.EntryForDate==reqData.EntryForDate && element.ProjectName==reqData.ProjectName && element.StageName==reqData.StageName && element.Taskname==reqData.Taskname && (element.Rejected==1 || req.body.updateFlag==1))
                     {
                         data["data"][index]["Rejected"]=0;
                         data["data"][index]["Approved"]=0;
@@ -588,7 +589,7 @@ function approver(req,res,data,approve,reject){
             res.status(500).send("ERROR");
             else{
                 if(raw["ok"]==1){
-                    model.find({"department":req.body.department},function(err,allAdata){
+                    model.find({"Approver":req.body.department},function(err,allAdata){
                         if(err)
                         res.status(500).send("ERROR");
                         else

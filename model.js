@@ -9,6 +9,7 @@ var UserSchema=new Schema({
 "department":String,
 "role":Object,
 "data":Array,
+"Approver":String
 },
 {
     collection:'testCollection'
