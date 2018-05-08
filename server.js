@@ -96,6 +96,93 @@ model.collection.insert(obj,function(err,record){
             res.send(users);
         });
     }
+    else if(typeof(req.query.model)!="undefined" && req.query.model=="None"){
+        model.find(JSON.parse(req.query.condition),function(err,users){
+            if(err)
+            res.status(500).send(err);
+            else
+            res.send(users);
+        });
+    }
+    else if(req.query.condition=="Init"){
+        console.log("check1",req.query.emailId);
+        adminModel.find({},function(err,admin){
+            if(err)
+            res.status(500).send(err);
+            else
+            {
+                admin=admin[0];
+                var DepartmentList=admin["DepartmentList"];
+                var email=req.query.emailId;
+                var listPresentIn={};
+                admin["Departments"].map(function(element,index){
+     var keysTaskApprover=Object.keys(element[DepartmentList[index]].TaskApprover);
+                    keysTaskApprover.map(function(Task,taskIndex){
+                        if(element[DepartmentList[index]]["TaskApprover"][Task]==email)
+                        {
+                            if(listPresentIn.hasOwnProperty(DepartmentList[index]))
+                            listPresentIn[DepartmentList[index]].push(Task);
+                            else{
+                                listPresentIn[DepartmentList[index]]=[];
+                                listPresentIn[DepartmentList[index]].push(Task);
+                            }
+                        }
+                        if(taskIndex==keysTaskApprover.length-1 && index==admin["Departments"].length-1)
+                        {
+                           // res.send(listPresentIn);
+                           var conditionArray=[];
+                           var orArray={"$or":[]};
+                           var orArrayLast={"$or":[]};
+                           
+                           Object.keys(listPresentIn).map(function(key,index){
+                                    orArray["$or"].push({"department":key});
+                                        listPresentIn[key].map(function(task,taskIndex){
+                                            orArrayLast["$or"].push({"data.Taskname":task,"department":key});
+                                            if(index==Object.keys(listPresentIn).length-1 && taskIndex==listPresentIn[key].length-1)
+                                            {
+                                                conditionArray.push({"$match":orArray});
+                                                conditionArray.push({"$unwind":{"path":"$data","includeArrayIndex":"index"}});
+                                                conditionArray.push({"$match":orArrayLast});
+                                                model.aggregate(conditionArray,function(err,result){
+                                                    if(err)
+                                                    res.send(err);
+                                                    else
+                                                    {   
+                                                        var Objectindex=[];
+                                                        var responseObject=[];
+                                                        if(result.length>0){
+                                                            result.map(function(eachRes,resIndex){
+                                                                 if(Objectindex.indexOf(eachRes["_id"].toString())!=-1)
+                                                                 responseObject[Objectindex.indexOf(eachRes["_id"].toString())]["data"].push(eachRes.data);
+                                                                else{
+                                                                    Objectindex.push(eachRes["_id"].toString());
+                                                                    var tempObj=eachRes['data'];
+                                                                    eachRes['data']=[tempObj];
+                                                                    responseObject.push(eachRes);
+                                                                }
+                                                                if(resIndex==result.length-1)
+                                                                {
+                                                                    res.json({"userData":responseObject,"adminData":listPresentIn});}
+                                                            });
+                                                        }
+                                                        else
+                                                        res.status(500).send("NO_DATA");
+                                                    }
+                                                    //res.send(result);
+                                                });
+                                            }
+                                        
+                                        
+                                        });
+                                    
+                                });
+                        }    
+                    });
+                });
+            }
+        });
+    }
+    /*
     else if(typeof(req.query.condition!="undefined")){
         model.find(JSON.parse(req.query.condition),function(err,users){
             if(err)
@@ -103,7 +190,7 @@ model.collection.insert(obj,function(err,record){
             else
             res.send(users);
         });
-      }
+    }*/
     else{
         res.status(500).send("NO_USERS_FOUND");
 }
@@ -170,7 +257,7 @@ router.route("/manageDepartment")
             if(data["DepartmentList"].indexOf(req.body.departmentName)==-1)
             {
                 var obj={};
-                obj[req.body.departmentName]={"Projects" : [],"Stages" : [],"Tasks" : []};
+                obj[req.body.departmentName]={"Projects" : [],"Stages" : [],"Tasks" : [],"TaskApprover":{}};
                 data["DepartmentList"].push(req.body.departmentName);
                 data["Departments"].push(obj);
                 console.log(data);
@@ -352,6 +439,37 @@ router.route("/stageAdmin")
     }
 });
 
+router.route("/taskAdminEdit")
+.put(function(req,res){
+var reqData=JSON.parse(req.body.data);
+adminModel.find({},function(err,data){
+if(err)
+res.status(500).send(err);
+else{
+    data=data[0];   
+    data["Departments"].map(function(element,index){
+        if(element.hasOwnProperty(reqData.department))
+        {
+            if(element[reqData.department]["TaskApprover"].hasOwnProperty(reqData.task)){
+            element[reqData.department]["TaskApprover"][reqData.task]=reqData.emailId;
+            }
+        }
+        if(index==data["Departments"].length-1)
+        {
+            data.markModified("Departments");
+            data.save(function(err,data){
+                if(err)
+                res.status(500).send(err);
+                else
+                res.send(data);
+            })
+        }
+    });
+}
+});
+});
+
+
 router.route("/taskAdmin")
 .put(function(req,res){
     adminModel.findOne({},function(err,data){
@@ -366,6 +484,7 @@ router.route("/taskAdmin")
                 {
                     if(data["Departments"][index][reqData.selectedDepartment]["Tasks"].indexOf(reqData.taskName)==-1){
                         data["Departments"][index][reqData.selectedDepartment]["Tasks"].push(reqData.taskName);
+                        data["Departments"][index][reqData.selectedDepartment]["TaskApprover"][reqData.taskName]=reqData.Approver;
                         data.markModified("Departments");
                         data.save(function(err){
                             if(err)
@@ -400,6 +519,7 @@ router.route("/taskAdmin")
                             if(taskIndex!=-1){
                                 console.log(data["Departments"][index]);
                                 data["Departments"][index][reqData.selectedDepartment]["Tasks"].splice(taskIndex,1);
+                                delete data["Departments"][index][reqData.selectedDepartment]["TaskApprover"][reqData.taskName];
                                 data.markModified("Departments");
                                 data.save(function(err){
                                     if(err)
@@ -547,12 +667,14 @@ router.route('/approver')
 });
 
 function approverForAll(req,res,data,approve,reject){
+    console.log(data);
 if(data.length>=0){
 model.findById(data[0]["_id"],function(err,result){
     if(err)
     res.status(500).send("ERROR");
     else{
-    data.map(function(element,i){
+        console.log(result);
+        data.map(function(element,i){
     result.data[element.index]["Approved"]=approve;
     result.data[element.index]["Rejected"]=reject;
     console.log(   result.data[element.index]);
@@ -565,7 +687,20 @@ model.findById(data[0]["_id"],function(err,result){
         if(err)
         throw err;
         else
-        res.send(result);
+        {
+            var adminData=JSON.parse(req.body.admin);
+            var task=adminData[result.department];
+            var tempData=[];
+            result.data.map(function(data,dataIndex){
+                if(task.indexOf(data.Taskname)!=-1)
+                tempData.push(data);
+                //                result["data"].splice(dataIndex,1);
+                if(dataIndex==result.data.length-1){
+                    result.data=tempData;
+                    res.send(result);
+                }
+            });
+        }
       });
   }  
     });
@@ -579,6 +714,7 @@ function approver(req,res,data,approve,reject){
     var toUpdateApproved="data."+data[0]["index"]+".Approved";
         var toUpdateRejected="data."+data[0]["index"]+".Rejected";
         var obj={};
+        var adminData=JSON.parse(req.body.admin);
         obj[toUpdateApproved]=0;
         obj[toUpdateRejected]=0;
     if(data[0].data.Approved==0 && data[0].data.Rejected==0){
@@ -586,18 +722,33 @@ function approver(req,res,data,approve,reject){
         obj[toUpdateRejected]=reject;
         model.update({"_id":data[0]["_id"]},{$set:obj},function(err,raw){
             if(err)
-            res.status(500).send("ERROR");
+                     res.status(500).send("ERROR");
             else{
                 if(raw["ok"]==1){
-                    model.find({"Approver":req.body.department},function(err,allAdata){
+                    model.find({"_id":{"$in":JSON.parse(req.body["_id"])}},function(err,allAdata){
                         if(err)
                         res.status(500).send("ERROR");
                         else
-                        res.send(allAdata);
+                        {
+                            allAdata.map(function(obj,index){
+                                var task=adminData[obj["department"]];
+                                var tempData=[];
+                                obj.data.map(function(data,dataIndex){
+                                    if(task.indexOf(data.Taskname)!=-1)
+                                    tempData.push(data);
+                                    if( dataIndex==obj.data.length-1){
+                                        allAdata[index]["data"]=tempData;
+                                        if(index==allAdata.length-1 )
+                                        res.send(allAdata);
+                                    }
+                                });
+                            });
+                        }
+                        //                        
                     });
                 }
                 else
-                res.status(500).send("ERROR");
+                  res.status(500).send("ERROR");
             }
         });}
 }
