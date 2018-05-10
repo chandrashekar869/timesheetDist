@@ -30,7 +30,7 @@ router.use(function(req,res,next){
 //All user CRUD done in the below route http://localhost:port/restAPI/user
 router.route("/user")
 //CREATE OR ADD A USER TO THE DB
-.post(function(req,res){
+.post(verifyToken,function(req,res){
     var userData=JSON.parse(req.body.userData);
     var obj={
         "data" : new Array(),
@@ -39,7 +39,7 @@ router.route("/user")
         "phone" :userData.mobile,
         "password" : userData.password,
         "department" : userData.selectedDepartment,
-        "Approver":userData.Approver,
+        "forceLogOut":false,
         "role" : {
             "name" : "User",
             "canApprove" : (userData.canApproved?1:0)
@@ -197,19 +197,33 @@ model.collection.insert(obj,function(err,record){
 })
 
 //update user data
-.put(function(req,res){
+.put(verifyToken,function(req,res){
     model.findOne(JSON.parse(req.body.condition),function(err,data){
         if(err)
         res.send(err);
         else 
-        console.log(data);
         {   if(data!=null){
-            data[req.body.param]=req.body.data;
-            data.save(function(err){
-                if(err)
-                res.send(err);
+            var bodyData=JSON.parse(req.body.data);
+            var bodyParam=JSON.parse(req.body.param);
+            console.log(bodyParam);
+            bodyParam.map(function(element,index){
+                console.log(element);
+
+                if(element=="role.canApprove"){
+                data["role"]["canApprove"]=bodyData[index];
+                data.markModified("role");
+            console.log("matched", data["role"]["canApprove"]);}
                 else
-                res.json("SUCCESS");
+                data[element]=bodyData[index];
+                if(index==bodyParam.length-1)
+                {
+                    data.save(function(err){
+                        if(err)
+                        res.send(err);
+                        else
+                        res.json({message:"SUCCESS",data:data});
+                    });
+                }
             });
             }
             else
@@ -218,7 +232,7 @@ model.collection.insert(obj,function(err,record){
     });
 })
 
-.delete(function(req,res){
+.delete(verifyToken,function(req,res){
     model.remove(req.body.condition,function(err){
         if(err)
         res.send(err);
@@ -238,7 +252,13 @@ router.route("/login")
                 var resData={};
                 resData.token=token;
                 resData.payload=users[0];
-                res.send(resData);
+                model.update({"emailId":req.query.emailId},{"forceLogOut":false},function(err,raw){
+                    if(err)
+                    res.status(500).send(err);
+                    else
+                    res.send(resData);
+
+                });
             });
             }
             else 
@@ -248,7 +268,7 @@ router.route("/login")
 });
 
 router.route("/manageDepartment")
-.put(function(req,res){
+.put(verifyToken,function(req,res){
     adminModel.findOne(JSON.parse(req.body.condition),function(err,data){
         if(err)
         res.status(500).send(err);
@@ -275,7 +295,7 @@ router.route("/manageDepartment")
         }
     });
 })
-.delete(function(req,res){
+.delete(verifyToken,function(req,res){
     if(typeof(req.query.departmentName)!="undefined"){
     adminModel.findOne(JSON.parse(req.query.condition),function(err,data){
         if(err)
@@ -306,8 +326,57 @@ router.route("/manageDepartment")
 }
 });
 
+router.route("/editDepartment")
+.put(verifyToken,function(req,res){
+    adminModel.find({},function(err,adminData){
+        if(err)
+        res.status(500).send(err);
+        else{
+            var initIndex=0;
+            if(adminData!=null){
+                adminData=adminData[0];
+                adminData["DepartmentList"][adminData["DepartmentList"].indexOf(req.body.department)]=req.body.newDepartment;
+                if(adminData["DepartmentList"].lastIndexOf(req.body.newDepartment)==adminData["DepartmentList"].indexOf(req.body.newDepartment))
+                {
+                    adminData["Departments"].map(function(element,depindex){
+                    if(adminData["Departments"][depindex].hasOwnProperty(req.body.department)){
+                        Object.defineProperty(adminData["Departments"][depindex],req.body.newDepartment,Object.getOwnPropertyDescriptor(adminData["Departments"][depindex],req.body.department));
+                delete adminData["Departments"][depindex][req.body.department];
+                console.log(element);
+                }
+                if(depindex==adminData["Departments"].length-1){
+                    adminData.markModified("Departments");
+                    adminData.markModified("DepartmentList");
+                    adminData.save(function(err){
+                        if(err)
+                        res.status(500).send(err);
+                        else{
+                            model.update({"department":req.body.department},{"department":req.body.newDepartment,"forceLogOut":true}, {multi: true},function(err,raw){
+                                if(err)
+                                res.status(500).send(err);
+                                else
+                                res.send({"message":"SUCCESS","data":raw});
+                            });
+                        }
+                    });
+                }
+                });}
+                else{
+                    adminData["DepartmentList"][adminData["DepartmentList"].indexOf(req.body.newDepartment)]=req.body.department; 
+                    console.log("message");
+                    res.send({"message":"DUPLICATE"});
+                   }
+            }
+            else
+            res.status(500).send("NO_DATA");
+        }
+    });
+});
+
+
+
 router.route("/projectAdmin")
-.put(function(req,res){
+.put(verifyToken,function(req,res){
     adminModel.findOne({},function(err,data){
     if(err)
     res.status(500).send(err);
@@ -337,7 +406,7 @@ router.route("/projectAdmin")
     }
     });
 })
-.delete(function(req,res){
+.delete(verifyToken,function(req,res){
     if(typeof(req.query.projectData)!="undefined"){
         adminModel.findOne({},function(err,data){
             if(err)
@@ -372,7 +441,7 @@ router.route("/projectAdmin")
 });
 
 router.route("/stageAdmin")
-.put(function(req,res){
+.put(verifyToken,function(req,res){
     adminModel.findOne({},function(err,data){
     if(err)
     res.status(500).send(err);
@@ -403,7 +472,7 @@ router.route("/stageAdmin")
     }
     });
 })
-.delete(function(req,res){
+.delete(verifyToken,function(req,res){
     if(typeof(req.query.stageData)!="undefined"){
         adminModel.findOne({},function(err,data){
             if(err)
@@ -440,7 +509,7 @@ router.route("/stageAdmin")
 });
 
 router.route("/taskAdminEdit")
-.put(function(req,res){
+.put(verifyToken,function(req,res){
 var reqData=JSON.parse(req.body.data);
 adminModel.find({},function(err,data){
 if(err)
@@ -471,7 +540,7 @@ else{
 
 
 router.route("/taskAdmin")
-.put(function(req,res){
+.put(verifyToken,function(req,res){
     adminModel.findOne({},function(err,data){
     if(err)
     res.status(500).send(err);
@@ -503,7 +572,7 @@ router.route("/taskAdmin")
     }
     });
 })
-.delete(function(req,res){
+.delete(verifyToken,function(req,res){
     if(typeof(req.query.taskData)!="undefined"){
         adminModel.findOne({},function(err,data){
             if(err)
@@ -614,7 +683,7 @@ router.route("/updateTimeSheet")
 });
 
 router.route("/getInitData")
-.get(function(req,res){
+.get(verifyToken,function(req,res){
     adminModel.find({},function(err,data){
         if(err)
         res.status(500).send("ERROR");
@@ -754,13 +823,30 @@ function approver(req,res,data,approve,reject){
 }
 function verifyToken(req,res,next){
     var authHeader=req.headers["authorization"];
+    var forceLogOut=req.headers["verifylogout"];
     const token=authHeader.split(" ")[1];
+    const emailforLogOut=forceLogOut.split(" ")[1];
+    console.log(forceLogOut);
     console.log(token);
     jwt.verify(token,key,function(err,authData){
         if(err)
         res.sendStatus(401);
         else
-        next();
+        {
+            model.find({"_id":emailforLogOut},function(err,data){
+                if(err)
+                res.sendStatus(401);
+                else{
+                    if(data!=null){
+                   data=data[0];
+                    if(data.forceLogOut==true)
+                    res.sendStatus(405);
+                    else if(data.forceLogOut==false)
+                    next();
+                }
+                }
+            });
+        }
     });
 
 }

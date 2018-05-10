@@ -9,7 +9,7 @@ var UserSchema=new Schema({
 "department":String,
 "role":Object,
 "data":Array,
-"Approver":String
+"forceLogOut":Boolean
 },
 {
     collection:'testCollection'
