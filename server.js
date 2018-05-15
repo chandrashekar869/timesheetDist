@@ -117,7 +117,8 @@ model.collection.insert(obj,function(err,record){
                 var listPresentIn={};
                 admin["Departments"].map(function(element,index){
      var keysTaskApprover=Object.keys(element[DepartmentList[index]].TaskApprover);
-                    keysTaskApprover.map(function(Task,taskIndex){
+     if(keysTaskApprover.length>0){               
+     keysTaskApprover.map(function(Task,taskIndex){
                         if(element[DepartmentList[index]]["TaskApprover"][Task]==email)
                         {
                             if(listPresentIn.hasOwnProperty(DepartmentList[index]))
@@ -178,6 +179,60 @@ model.collection.insert(obj,function(err,record){
                                 });
                         }    
                     });
+                }
+                else{
+
+                    if(index==admin["Departments"].length-1)
+                    {
+                       // res.send(listPresentIn);
+                       var conditionArray=[];
+                       var orArray={"$or":[]};
+                       var orArrayLast={"$or":[]};
+                       
+                       Object.keys(listPresentIn).map(function(key,index){
+                                orArray["$or"].push({"department":key});
+                                    listPresentIn[key].map(function(task,taskIndex){
+                                        orArrayLast["$or"].push({"data.Taskname":task,"department":key});
+                                        if(index==Object.keys(listPresentIn).length-1 && taskIndex==listPresentIn[key].length-1)
+                                        {
+                                            conditionArray.push({"$match":orArray});
+                                            conditionArray.push({"$unwind":{"path":"$data","includeArrayIndex":"index"}});
+                                            conditionArray.push({"$match":orArrayLast});
+                                            model.aggregate(conditionArray,function(err,result){
+                                                if(err)
+                                                res.send(err);
+                                                else
+                                                {   
+                                                    var Objectindex=[];
+                                                    var responseObject=[];
+                                                    if(result.length>0){
+                                                        result.map(function(eachRes,resIndex){
+                                                             if(Objectindex.indexOf(eachRes["_id"].toString())!=-1)
+                                                             responseObject[Objectindex.indexOf(eachRes["_id"].toString())]["data"].push(eachRes.data);
+                                                            else{
+                                                                Objectindex.push(eachRes["_id"].toString());
+                                                                var tempObj=eachRes['data'];
+                                                                eachRes['data']=[tempObj];
+                                                                responseObject.push(eachRes);
+                                                            }
+                                                            if(resIndex==result.length-1)
+                                                            {
+                                                                res.json({"userData":responseObject,"adminData":listPresentIn});}
+                                                        });
+                                                    }
+                                                    else
+                                                    res.status(500).send("NO_DATA");
+                                                }
+                                                //res.send(result);
+                                            });
+                                        }
+                                    
+                                    
+                                    });
+                                
+                            });
+                    }   
+                }
                 });
             }
         });
