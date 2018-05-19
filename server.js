@@ -329,7 +329,7 @@ router.route("/manageDepartment")
         res.status(500).send(err);
         else 
         {   
-            if(data["DepartmentList"].indexOf(req.body.departmentName)==-1)
+            if(data!=null && data["DepartmentList"].indexOf(req.body.departmentName)==-1)
             {
                 var obj={};
                 obj[req.body.departmentName]={"Projects" : [],"Stages" : [],"Tasks" : [],"TaskApprover":{}};
