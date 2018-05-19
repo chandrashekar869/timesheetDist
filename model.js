@@ -12,7 +12,7 @@ var UserSchema=new Schema({
 "forceLogOut":Boolean
 },
 {
-    collection:'testCollection'
+    collection:'userCollection'
 }
 );
-module.exports=mongoose.model("testCollection",UserSchema);
+module.exports=mongoose.model("userCollection",UserSchema);
