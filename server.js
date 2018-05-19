@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 var port = 3000;
 var router = express.Router();
-mongoose.connect("mongodb://localhost:27017/testDB");
+mongoose.connect("mongodb://localhost:27017/timsheetDB");
 app.use(cors());
 app.use('/', express.static(__dirname + '/dist'));
 
