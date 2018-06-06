@@ -6,7 +6,7 @@ var UserSchema=new Schema({
 "phone":String,
 "password":String,
 "address":String,
-"department":String,
+"department":Array,
 "role":Object,
 "data":Array,
 "forceLogOut":Boolean

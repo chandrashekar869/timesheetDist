@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 var port = 3000;
 var router = express.Router();
-mongoose.connect("mongodb://localhost:27017/timsheetDB");
+mongoose.connect("mongodb://localhost:27017/timesheetDB");
 app.use(cors());
 app.use('/', express.static(__dirname + '/dist'));
 
@@ -38,7 +38,7 @@ router.route("/user")
         "emailId" :userData.email,
         "phone" :userData.mobile,
         "password" : userData.password,
-        "department" : userData.selectedDepartment,
+        "department" : userData.selectedDepartments,
         "forceLogOut":false,
         "role" : {
             "name" : "User",
@@ -119,7 +119,7 @@ model.collection.insert(obj,function(err,record){
      var keysTaskApprover=Object.keys(element[DepartmentList[index]].TaskApprover);
      if(keysTaskApprover.length>0){               
      keysTaskApprover.map(function(Task,taskIndex){
-                        if(element[DepartmentList[index]]["TaskApprover"][Task]==email)
+                        if(element[DepartmentList[index]]["TaskApprover"][Task].indexOf(email)!=-1)
                         {
                             if(listPresentIn.hasOwnProperty(DepartmentList[index]))
                             listPresentIn[DepartmentList[index]].push(Task);
@@ -130,6 +130,7 @@ model.collection.insert(obj,function(err,record){
                         }
                         if(taskIndex==keysTaskApprover.length-1 && index==admin["Departments"].length-1)
                         {
+                            console.log(listPresentIn);
                            // res.send(listPresentIn);
                            var conditionArray=[];
                            var orArray={"$or":[]};
@@ -406,11 +407,19 @@ router.route("/editDepartment")
                         if(err)
                         res.status(500).send(err);
                         else{
-                            model.update({"department":req.body.department},{"department":req.body.newDepartment,"forceLogOut":true}, {multi: true},function(err,raw){
+                            model.update({"department":req.body.department},{"department.$":req.body.newDepartment,"forceLogOut":true}, {multi: true},function(err,raw){
                                 if(err)
                                 res.status(500).send(err);
                                 else
-                                res.send({"message":"SUCCESS","data":raw});
+                                {
+                                    model.update({},{"data.$[i].department":req.body.newDepartment}, {arrayFilters:[{"i.department":req.body.department}],multi: true},function(err,raw){
+                                        if(err)
+                                        res.status(500).send(err);
+                                        else
+                                        res.send({"message":"SUCCESS","data":raw});
+                                    });
+                                    
+                                }
                             });
                         }
                     });
@@ -575,7 +584,7 @@ else{
         if(element.hasOwnProperty(reqData.department))
         {
             if(element[reqData.department]["TaskApprover"].hasOwnProperty(reqData.task)){
-            element[reqData.department]["TaskApprover"][reqData.task]=reqData.emailId;
+            element[reqData.department]["TaskApprover"][reqData.task]=reqData.selectedApprovers;
             }
         }
         if(index==data["Departments"].length-1)
@@ -608,7 +617,7 @@ router.route("/taskAdmin")
                 {
                     if(data["Departments"][index][reqData.selectedDepartment]["Tasks"].indexOf(reqData.taskName)==-1){
                         data["Departments"][index][reqData.selectedDepartment]["Tasks"].push(reqData.taskName);
-                        data["Departments"][index][reqData.selectedDepartment]["TaskApprover"][reqData.taskName]=reqData.Approver;
+                        data["Departments"][index][reqData.selectedDepartment]["TaskApprover"][reqData.taskName]=reqData.selectedApprovers;
                         data.markModified("Departments");
                         data.save(function(err){
                             if(err)
@@ -676,6 +685,7 @@ router.route("/updateTimeSheet")
         else 
         {   
         try{   
+
             if(data==null || data.length==0){
                 model.findOne(JSON.parse(req.body.userCondition),function(err,data){
                     if(err)
@@ -686,8 +696,17 @@ router.route("/updateTimeSheet")
                     data.save(function(err){
                         if(err)
                         res.status(500).send("ERROR");
-                        else
-                        res.json({"status":"SUCCESS","data":data["data"]});
+                        else{
+                            var temp=[];
+                            data["data"].map(function(element,index){
+                                if(element.department==JSON.parse(req.body.data).department){
+                                    temp.push(element);
+                                }
+                                if(index==data["data"].length-1){
+                                    res.json({"status":"SUCCESS","data":temp});
+                                }
+                            });
+                        }
                     });
                     }                    
                 });
@@ -699,7 +718,7 @@ router.route("/updateTimeSheet")
                 data=data[0];
                 data["data"].some((element,index) => {
                     console.log(element.EntryForDate,reqData.EntryForDate);
-                    if(element.EntryForDate==reqData.EntryForDate && element.ProjectName==reqData.ProjectName && element.StageName==reqData.StageName && element.Taskname==reqData.Taskname && (element.Rejected==1 || req.body.updateFlag==1))
+                    if(element.department==JSON.parse(req.body.data).department && element.EntryForDate==reqData.EntryForDate && element.ProjectName==reqData.ProjectName && element.StageName==reqData.StageName && element.Taskname==reqData.Taskname && (element.Rejected==1 || req.body.updateFlag==1))
                     {
                         data["data"][index]["Rejected"]=0;
                         data["data"][index]["Approved"]=0;
@@ -715,7 +734,15 @@ router.route("/updateTimeSheet")
                         return true;
                         }
                         else{
-                        res.json({"status":"SUCCESS","data":data["data"]});
+                            var temp=[];
+                            data["data"].map(function(element,index){
+                                if(element.department==JSON.parse(req.body.data).department){
+                                    temp.push(element);
+                                }
+                                if(index==data["data"].length-1){
+                                    res.json({"status":"SUCCESS","data":temp});
+                                }
+                            });
                         return true;    
                     }
                     });
@@ -756,13 +783,27 @@ router.route("/getInitData")
                 if(data2==null || data2.length==0)
                 res.status(500).send("ERROR");
                 else{
+                    console.log(data2[0]["data"]);
+                    var temp=[];
+                    if(data2[0]["data"].length>0){
+                        data2[0]["data"].map(function(element,index){
+                            if(element.department==req.query.department){
+                                temp.push(element);
+                            }
+                            if(index==data2[0]["data"].length-1){
+                                res.send({"timesheetData":temp,"data":data[0]});         
+                              
+                            }
+                        });
+                    }
+                    else
                     res.send({"timesheetData":data2[0]["data"],"data":data[0]});         
                 }
             }catch(err){
                 res.status(500).send("ERROR");
             }
         }
-         });
+        });
                 }
             }
             catch(err){
@@ -798,10 +839,18 @@ model.findById(data[0]["_id"],function(err,result){
     res.status(500).send("ERROR");
     else{
         console.log(result);
+        var count=0;
         data.map(function(element,i){
+            if(result.data[element.index]["department"]==req.body.dep){
+                if(result.data[element.index]["Approved"]==0 && result.data[element.index]["Rejected"]==0){
     result.data[element.index]["Approved"]=approve;
     result.data[element.index]["Rejected"]=reject;
     console.log(   result.data[element.index]);
+                }
+                else{
+                    count++;
+                }
+}
 //        console.log(result.data[element.index]);
   if(i==data.length-1)
   {
@@ -813,7 +862,8 @@ model.findById(data[0]["_id"],function(err,result){
         else
         {
             var adminData=JSON.parse(req.body.admin);
-            var task=adminData[result.department];
+            var task=adminData[req.body.dep];
+            console.log(req.body.dep);
             var tempData=[];
             result.data.map(function(data,dataIndex){
                 if(task.indexOf(data.Taskname)!=-1)
@@ -821,6 +871,9 @@ model.findById(data[0]["_id"],function(err,result){
                 //                result["data"].splice(dataIndex,1);
                 if(dataIndex==result.data.length-1){
                     result.data=tempData;
+                    if(count>0)
+                    res.send({"message":"One or more tasks have been updated by another approvers.Only tasks that are not updated will be updated","result":result});
+                    else
                     res.send(result);
                 }
             });
@@ -841,7 +894,7 @@ function approver(req,res,data,approve,reject){
         var adminData=JSON.parse(req.body.admin);
         obj[toUpdateApproved]=0;
         obj[toUpdateRejected]=0;
-    if(data[0].data.Approved==0 && data[0].data.Rejected==0){
+    if(data[0].data.Approved==0 && data[0].data.Rejected==0 && data[0].data.department==req.body.dep){
         obj[toUpdateApproved]=approve;
         obj[toUpdateRejected]=reject;
         model.update({"_id":data[0]["_id"]},{$set:obj},function(err,raw){
@@ -855,7 +908,9 @@ function approver(req,res,data,approve,reject){
                         else
                         {
                             allAdata.map(function(obj,index){
-                                var task=adminData[obj["department"]];
+                                var task=adminData[req.body.dep];
+                                console.log(adminData,req.body.dep,task)
+                                //                                var task=adminData[obj["department"]];
                                 var tempData=[];
                                 obj.data.map(function(data,dataIndex){
                                     if(task.indexOf(data.Taskname)!=-1)
@@ -875,8 +930,35 @@ function approver(req,res,data,approve,reject){
                   res.status(500).send("ERROR");
             }
         });}
+        else{
+           model.find({"_id":{"$in":JSON.parse(req.body["_id"])}},function(err,allAdata){
+                if(err)
+                res.status(500).send("ERROR");
+                else
+                {
+                    allAdata.map(function(obj,index){
+                        var task=adminData[req.body.dep];
+                        console.log(adminData,req.body.dep,task)
+                        //                                var task=adminData[obj["department"]];
+                        var tempData=[];
+                        obj.data.map(function(data,dataIndex){
+                            if(task.indexOf(data.Taskname)!=-1)
+                            tempData.push(data);
+                            if( dataIndex==obj.data.length-1){
+                                allAdata[index]["data"]=tempData;
+                                if(index==allAdata.length-1 )
+                                res.send({"message":"The selected task was alread approved by another approver","allAdata":allAdata});
+                            }
+                        });
+                    });
+                }
+                //                        
+            });
+
+        }
 }
 function verifyToken(req,res,next){
+   
     var authHeader=req.headers["authorization"];
     var forceLogOut=req.headers["verifylogout"];
     const token=authHeader.split(" ")[1];
@@ -888,12 +970,12 @@ function verifyToken(req,res,next){
         res.sendStatus(401);
         else
         {
-            model.find({"_id":emailforLogOut},function(err,data){
+            model.findById(emailforLogOut,function(err,data){
                 if(err)
                 res.sendStatus(401);
                 else{
+
                     if(data!=null){
-                   data=data[0];
                     if(data.forceLogOut==true)
                     res.sendStatus(405);
                     else if(data.forceLogOut==false)
