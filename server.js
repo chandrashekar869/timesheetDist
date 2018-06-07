@@ -8,6 +8,10 @@ var key="TIMESHEET_DEVELOPMENT_KEY";
 var model = require('./model');
 var path = require('path');
 var adminModel=require('./adminModel');
+process.on('uncaughtException', function (err) {
+    console.error(err);
+    console.log("Node NOT Exiting...");
+  });
 app.use(bodyParser.urlencoded({
     extended:true
 }));
