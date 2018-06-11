@@ -751,6 +751,35 @@ router.route("/updateTimeSheet")
                     }
                     });
                     }
+                    else if(element.department==JSON.parse(req.body.data).department && element.EntryForDate==reqData.EntryForDate && element.ProjectName==reqData.ProjectName && element.StageName==reqData.StageName && element.Taskname==reqData.Taskname && (element.Rejected==1 || req.body.deleteFlag==1))
+                    {
+                        console.log("delete called");
+                        data["data"].splice(index,1);
+                        data.markModified('data');
+                        data.save(function(err){
+                        if(err){
+                        res.status(500).send("ERROR");
+                        return true;
+                        }
+                        else{
+                            var temp=[];
+                            if(data["data"].length>0){
+                            data["data"].map(function(element,index){
+                                if(element.department==JSON.parse(req.body.data).department){
+                                    temp.push(element);
+                                }
+                                if(index==data["data"].length-1){
+                                    res.json({"status":"DELETED_SUCCESS","data":temp});
+                                }
+                            });
+                        }
+                        else
+                        res.json({"status":"DELETED_SUCCESS","data":[]});
+                            
+                        return true;    
+                    }
+                    });
+                    }
                     else if(element.EntryForDate==reqData.EntryForDate && element.ProjectName==reqData.ProjectName && element.StageName==reqData.StageName && element.Taskname==reqData.Taskname && element.Rejected==0 && element.Approved!=0) {
                         console.log("check",element);
                         res.status(500).send("DUPLICATE_ENTRY");
