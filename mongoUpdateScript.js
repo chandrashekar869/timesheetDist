@@ -9,12 +9,18 @@ model.find({}).cursor()
     console.log("User data retrieved...");
     if(doc.data.length>0)
     {
+        doc.forceLogOut=true;
+        model.update({"_id": doc._id}, doc, function(err, updated) {
+            console.log("Updating user data...");
+            if(err) throw err;
+     });      
+        }/*
         doc.data.map(function(element,index){
             if(element.Taskname=="Design mamagemant & co-ordination"){
                 console.log(doc);
                 doc.data[index].Taskname="Design management & co-ordination";
             }
-            /*if(element.department=="IT & Documantation"){
+            if(element.department=="IT & Documantation"){
                 doc.data[index].department="IT & Documentation";
             }
             else if(element.department=="Managemant"){
@@ -22,15 +28,14 @@ model.find({}).cursor()
             }
             else if(element.department=="Fecility managemant"){
                 doc.data[index].department="Facility Management";
-            }*/
-            if(index==doc.data.length-1){
-                model.update({"_id": doc._id}, doc, function(err, updated) {
-                    console.log("Updating user data...");
-                    if(err) throw err;
-             });            
             }
+if(index==doc.data.length-1){
+            model.update({"_id": doc._id}, doc, function(err, updated) {
+                console.log("Updating user data...");
+                if(err) throw err;
+         });  
          });
-    }
+    }*/
 })
 .on('error', function(err){
     console.log("Error occured while updating user data",error);

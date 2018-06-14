@@ -20,13 +20,13 @@ var port = 3000;
 var router = express.Router();
 mongoose.connect("mongodb://localhost:27017/timesheetDB");
 app.use(cors());
-app.use('/', express.static(__dirname + '/dist'));
+//app.use('/', express.static(__dirname + '/dist'));
 
 app.use("/restAPI",router);
-
+/*
 app.get('*',(req,res)=>{
   res.sendFile(path.join(__dirname + '/dist/index.html'));
-  });
+  });*/
 router.use(function(req,res,next){
 //First to recieve the request hence request logging can be done here
     next();
