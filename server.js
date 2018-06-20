@@ -356,6 +356,7 @@ router.route("/manageDepartment")
     });
 })
 .delete(verifyToken,function(req,res){
+    req.query.departmentName=decodeURI(req.query.departmentName);
     if(typeof(req.query.departmentName)!="undefined"){
     adminModel.findOne(JSON.parse(req.query.condition),function(err,data){
         if(err)
@@ -475,6 +476,7 @@ router.route("/projectAdmin")
     });
 })
 .delete(verifyToken,function(req,res){
+    req.query.projectData=decodeURI(req.query.projectData);
     if(typeof(req.query.projectData)!="undefined"){
         adminModel.findOne({},function(err,data){
             if(err)
@@ -541,6 +543,7 @@ router.route("/stageAdmin")
     });
 })
 .delete(verifyToken,function(req,res){
+    req.query.stageData=decodeURI(req.query.stageData);
     if(typeof(req.query.stageData)!="undefined"){
         adminModel.findOne({},function(err,data){
             if(err)
@@ -646,7 +649,7 @@ router.route("/taskAdmin")
             if(err)
             res.status(500).send(err);
             else{
-                var reqData=JSON.parse(req.query.taskData);
+                var reqData=JSON.parse(decodeURI(req.query.taskData));
                 console.log(reqData);
                 if(data["DepartmentList"].indexOf(reqData.selectedDepartment)!=-1){
                     data["Departments"].map(function(element,index){
@@ -799,6 +802,8 @@ router.route("/updateTimeSheet")
 
 router.route("/getInitData")
 .get(verifyToken,function(req,res){
+    req.query.emailId=decodeURI(req.query.emailId);
+    req.query.department=decodeURI(req.query.department);
     adminModel.find({},function(err,data){
         if(err)
         res.status(500).send("ERROR");
