@@ -8,6 +8,19 @@ var key="TIMESHEET_DEVELOPMENT_KEY";
 var model = require('./model');
 var path = require('path');
 var adminModel=require('./adminModel');
+const http=require('http');
+const https=require('https');
+const fs=require('fs');
+const certkey=fs.readFileSync('key.pem', 'utf8');
+const certificate=fs.readFileSync('cert.pem', 'utf8');
+const credentials = {
+	key: certkey,
+    cert: certificate,
+    passphrase: '9886749725aB'
+};
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer(credentials, app);
+
 process.on('uncaughtException', function (err) {
     console.error(err);
     console.log("Node NOT Exiting...");
@@ -1025,9 +1038,14 @@ function verifyToken(req,res,next){
     });
 
 }
-app.listen(port);
+//app.listen(port);
+httpServer.listen(3000, () => {
+	console.log('HTTP Server running on port 80');
+});
 
-
+httpsServer.listen(2000, () => {
+	console.log('HTTPS Server running on port 443');
+});
 
 
 

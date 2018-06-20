@@ -1,0 +1,463 @@
+db.adminCollection.insert({
+	"Departments" : [
+		{
+			"Projects" : {
+				"Projects" : [
+					"IECP-112-RAINBOW-PH2",
+					"IECP-112-RAINBOW-PH3",
+					"IECP-120-NSL ITZ",
+					"IECP-139-ETHOS-PH-I",
+					"IECP-140- IT Sector-Ph3",
+					"IECP-140-Retail-Mall-Hotel",
+					"IECP-140-School",
+					"IECP-140-South parcel",
+					"IECP-142-NANDI-PH1",
+					"IECP-142-NANDI-PH2",
+					"IECP-143-TECHNOSTAR",
+					"IECP-149-Bidadi Ph2",
+					"IECP-151A-Bosch NHP 704a",
+					"IECP-151A-Bosch NHP 704-ETX",
+					"IECP-164-BIG BANG",
+					"IECP-168-METROZONE",
+					"IECP-172-ER- CHENNAI",
+					"IECP-176-CHIRPPING WOODS",
+					"IECP-182-GREENFIELD PH2",
+					"IECP-182-GREENFIELD-PH1",
+					"IECP-183-UNISHIRE SPACIO",
+					"IECP-186-FORTIS-HOS",
+					"IECP-189-ATTUR",
+					"IECP-190-BOLLINENI",
+					"IECP-191-SOUTHERN CREST",
+					"IECP-193-JAIN HEIGHTS",
+					"IECP-194-HEBBAL-ONE",
+					"IECP-195-FELIZ TOWERS",
+					"IECP-196-SOLARIS",
+					"IECP-197-MANIPAL-FAÇADE",
+					"IECP-198-OFFI BLDG (RVCPL)",
+					"IECP-199-NITESH CHELSEA",
+					"IECP-200-NITESH VIRGIN HIGHLAND",
+					"IECP-202-RMZ INFINITY",
+					"IECP-203-GCORP-PH2",
+					"IECP-203-RESI-@K0RMNGL",
+					"IECP-206-MSR TECH PARK",
+					"IECP-207-DUNES HOTEL @ KASARGOD",
+					"IECP-209-TAURUS DOWNTOWN",
+					"IECP-210-M3 - PARCEL 1&2",
+					"IECP-211-RESI APT AT HYD",
+					"IECP-212-UNISHIRE-WYNN",
+					"IECP-213-BOSCH-TRN CETRE",
+					"IECP-214- SANDS INFRA",
+					"IECP-215-HOLIDAY GROUP",
+					"IECP-216-EMBASSY-8A",
+					"IECP-217-RIVERA FOOD",
+					"IECP-218-RESI PROJ @ VIZAG",
+					"IECP-219-RMZ ECO WORLD",
+					"IECP-220-PETZ",
+					"IECP-221-VILLAS AT VIZAG",
+					"IECP-222-RESI DEVEL @ SIRUSERI",
+					"IECP-223-EMBASSY-8B",
+					"IECP-224-MANGADU",
+					"IECP-225-MANIPAL HOSPITAL",
+					"IECP-226-30,31&32-RMZ",
+					"IECP-227-ESTZ CHENNAI",
+					"IECP-228-SMR VINAY-STANLEY",
+					"IECP-229-COMM PROJ@KORAMANGALA",
+					"IECP-230-EMBASSY SPRINGS",
+					"IECP-231-AUROBINDO",
+					"IECP-232 Palm Spring at Guntur AP",
+					"IECP-233-ETV-3A",
+					"IECP-233-ETV-3B",
+					"IECP-236-MICROSOFT HYD",
+					"IECP-237- L&T HYD",
+					"IECP-238-GOOGLE INDIA",
+					"IECP-239-CONCORD-MAYFAIR",
+					"IECP-240-L4",
+					"IECP-241-RMZ 4D",
+					"IECP-242-ROHAN UPAVAN",
+					"IECP-243 BION-RES AT HYD",
+					"IECP-244 COMMER  PROJ  JC RD BLORE",
+					"IECP-245-RMZNEXITY-HYD",
+					"IECP-246-Phoenix Halcyon-Fuji at Hyd",
+					"IECP-247 Phoenix 285  - Phase 1 at Hyd",
+					"IECP-248 SATTVA KNOWLEDGE PARK",
+					"IECP-249 Resi Proj at Kokapet, Hyd",
+					"IECP-250-ETV-BLK9-JPMC",
+					"IECP-251 Shriram - Gateway",
+					"IECP-252-IT Building at Hyd-Koncept",
+					"IECP-254-IT building at Yelahanka",
+					"IECP-111-SALARPURIA GREENAGE",
+					"IECP-130-ELT-KBP",
+					"IECP-131-CENTURY SYNDHOME (SARAS)",
+					"IECP-145-JUBILEE HILLS LANDMARK PROJECTS",
+					"IECP-159-GOKALDAS LIFESTYLE"
+				],
+				"Stages" : [
+					"Concept",
+					"Schematic",
+					"Tender",
+					"DD",
+					"Execution",
+					"Completion"
+				],
+				"Tasks" : [
+					"Drafting",
+					"QS Team",
+					"Design",
+					"Design mamagemant & co-ordination",
+					"Documantation",
+					"Internal Meeting",
+					"External Meeting"
+				],
+				"TaskApprover" : {
+					"Drafting" : [
+						"kalpana@innotechconsult.in",
+						"aruna@innotechconsult.in"
+					],
+					"QS Team" : [
+						"keshavabharadwaj@innotechconsult.in",
+						"subramanya@innotechconsult.in"
+					],
+					"Design" : [
+						"dayananda@innotechconsult.in"
+					],
+					"Design mamagemant & co-ordination" : [
+						"bhavesh@innotechconsult.in"
+					],
+					"Documantation" : [
+						"subramanya@innotechconsult.in"
+					],
+					"Internal Meeting" : [
+						"bhavesh@innotechconsult.in"
+					],
+					"External Meeting" : [
+						"bhavesh@innotechconsult.in"
+					]
+				}
+			}
+		},
+		{
+			"R & D" : {
+				"Projects" : [
+					"Design"
+				],
+				"Stages" : [
+					"Steel"
+				],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"IT & Documantation" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Finance" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Managemant" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Administration" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Business Development" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Fecility managemant" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		}
+	],
+	"DepartmentList" : [
+		"Projects",
+		"R & D",
+		"IT & Documantation",
+		"Finance",
+		"Managemant",
+		"Administration",
+		"Business Development",
+		"Fecility managemant"
+	]
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+db.adminCollection.insert(
+{
+	"Departments" : [
+		{
+			"Projects" : {
+				"Projects" : [
+					"IECP-112-RAINBOW-PH2",
+					"IECP-112-RAINBOW-PH3",
+					"IECP-120-NSL ITZ",
+					"IECP-139-ETHOS-PH-I",
+					"IECP-140- IT Sector-Ph3",
+					"IECP-140-Retail-Mall-Hotel",
+					"IECP-140-School",
+					"IECP-140-South parcel",
+					"IECP-142-NANDI-PH1",
+					"IECP-142-NANDI-PH2",
+					"IECP-143-TECHNOSTAR",
+					"IECP-149-Bidadi Ph2",
+					"IECP-151A-Bosch NHP 704a",
+					"IECP-151A-Bosch NHP 704-ETX",
+					"IECP-164-BIG BANG",
+					"IECP-168-METROZONE",
+					"IECP-172-ER- CHENNAI",
+					"IECP-176-CHIRPPING WOODS",
+					"IECP-182-GREENFIELD PH2",
+					"IECP-182-GREENFIELD-PH1",
+					"IECP-183-UNISHIRE SPACIO",
+					"IECP-186-FORTIS-HOS",
+					"IECP-189-ATTUR",
+					"IECP-190-BOLLINENI",
+					"IECP-191-SOUTHERN CREST",
+					"IECP-193-JAIN HEIGHTS",
+					"IECP-194-HEBBAL-ONE",
+					"IECP-195-FELIZ TOWERS",
+					"IECP-196-SOLARIS",
+					"IECP-197-MANIPAL-FAÇADE",
+					"IECP-198-OFFI BLDG (RVCPL)",
+					"IECP-199-NITESH CHELSEA",
+					"IECP-200-NITESH VIRGIN HIGHLAND",
+					"IECP-202-RMZ INFINITY",
+					"IECP-203-GCORP-PH2",
+					"IECP-203-RESI-@K0RMNGL",
+					"IECP-206-MSR TECH PARK",
+					"IECP-207-DUNES HOTEL @ KASARGOD",
+					"IECP-209-TAURUS DOWNTOWN",
+					"IECP-210-M3 - PARCEL 1&2",
+					"IECP-211-RESI APT AT HYD",
+					"IECP-212-UNISHIRE-WYNN",
+					"IECP-213-BOSCH-TRN CETRE",
+					"IECP-214- SANDS INFRA",
+					"IECP-215-HOLIDAY GROUP",
+					"IECP-216-EMBASSY-8A",
+					"IECP-217-RIVERA FOOD",
+					"IECP-218-RESI PROJ @ VIZAG",
+					"IECP-219-RMZ ECO WORLD",
+					"IECP-220-PETZ",
+					"IECP-221-VILLAS AT VIZAG",
+					"IECP-222-RESI DEVEL @ SIRUSERI",
+					"IECP-223-EMBASSY-8B",
+					"IECP-224-MANGADU",
+					"IECP-225-MANIPAL HOSPITAL",
+					"IECP-226-30,31&32-RMZ",
+					"IECP-227-ESTZ CHENNAI",
+					"IECP-228-SMR VINAY-STANLEY",
+					"IECP-229-COMM PROJ@KORAMANGALA",
+					"IECP-230-EMBASSY SPRINGS",
+					"IECP-231-AUROBINDO",
+					"IECP-232 Palm Spring at Guntur AP",
+					"IECP-233-ETV-3A",
+					"IECP-233-ETV-3B",
+					"IECP-236-MICROSOFT HYD",
+					"IECP-237- L&T HYD",
+					"IECP-238-GOOGLE INDIA",
+					"IECP-239-CONCORD-MAYFAIR",
+					"IECP-240-L4",
+					"IECP-241-RMZ 4D",
+					"IECP-242-ROHAN UPAVAN",
+					"IECP-243 BION-RES AT HYD",
+					"IECP-244 COMMER  PROJ  JC RD BLORE",
+					"IECP-245-RMZNEXITY-HYD",
+					"IECP-246-Phoenix Halcyon-Fuji at Hyd",
+					"IECP-247 Phoenix 285  - Phase 1 at Hyd",
+					"IECP-248 SATTVA KNOWLEDGE PARK",
+					"IECP-249 Resi Proj at Kokapet, Hyd",
+					"IECP-250-ETV-BLK9-JPMC",
+					"IECP-251 Shriram - Gateway",
+					"IECP-252-IT Building at Hyd-Koncept",
+					"IECP-254-IT building at Yelahanka",
+					"IECP-111-SALARPURIA GREENAGE",
+					"IECP-130-ELT-KBP",
+					"IECP-131-CENTURY SYNDHOME (SARAS)",
+					"IECP-145-JUBILEE HILLS LANDMARK PROJECTS",
+					"IECP-159-GOKALDAS LIFESTYLE",
+					"General Meetings"
+				],
+				"Stages" : [
+					"Concept",
+					"Schematic",
+					"Tender",
+					"DD",
+					"Execution",
+					"Completion"
+				],
+				"Tasks" : [
+					"Drafting",
+					"QS Team",
+					"Design",
+					"Design management & co-ordination",
+					"Internal Meeting",
+					"External Meeting",
+					"Documentation"
+				],
+				"TaskApprover" : {
+					"Drafting" : [
+						"kalpana@innotechconsult.in",
+						"aruna@innotechconsult.in"
+					],
+					"QS Team" : [
+						"keshavabharadwaj@innotechconsult.in",
+						"subramanya@innotechconsult.in"
+					],
+					"Design" : [
+						"dayananda@innotechconsult.in"
+					],
+					"Design management & co-ordination" : [
+						"bhavesh@innotechconsult.in"
+					],
+					"Internal Meeting" : [
+						"bhavesh@innotechconsult.in"
+					],
+					"External Meeting" : [
+						"bhavesh@innotechconsult.in"
+					],
+					"Documentation" : [
+						"subramanya@innotechconsult.in"
+					]
+				}
+			}
+		},
+		{
+			"R & D" : {
+				"Projects" : [
+					"Design"
+				],
+				"Stages" : [
+					"Steel"
+				],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"IT & Documantation" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Finance" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Managemant" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Administration" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Business Development" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		},
+		{
+			"Fecility managemant" : {
+				"Projects" : [ ],
+				"Stages" : [ ],
+				"Tasks" : [ ],
+				"TaskApprover" : {
+					
+				}
+			}
+		}
+	],
+	"DepartmentList" : [
+		"Projects",
+		"R & D",
+		"IT & Documantation",
+		"Finance",
+		"Managemant",
+		"Administration",
+		"Business Development",
+		"Fecility managemant"
+	],
+});
