@@ -1,0 +1,560 @@
+Date|user|department|project|stage|task|hours|minutes
+2018-06-08|shivakumar@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|DD|Drafting|8|40
+2018-06-11|shivakumar@innotechconsult.in|Projects|IECP-140-South parcel|DD|Drafting|2|0
+2018-06-11|shivakumar@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|DD|Drafting|6|40
+2018-06-12|shivakumar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|DD|Drafting|2|1
+2018-06-12|shivakumar@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|DD|Drafting|6|40
+2018-06-13|shivakumar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|DD|Drafting|3|40
+2018-06-13|shivakumar@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|DD|Drafting|5|1
+2018-06-15|shivakumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|7|1
+2018-06-15|shivakumar@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|DD|Drafting|1|40
+2018-06-16|shivakumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|8|40
+2018-06-18|shivakumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|8|40
+2018-06-19|shivakumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|8|40
+2018-06-08|girish@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Schematic|Drafting|8|0
+2018-06-11|girish@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Schematic|Drafting|4|0
+2018-06-11|girish@innotechconsult.in|Projects|IECP-140-South parcel|Schematic|Drafting|4|0
+2018-06-12|girish@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Schematic|Drafting|8|0
+2018-06-13|girish@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Schematic|Drafting|6|0
+2018-06-14|girish@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Schematic|Drafting|8|0
+2018-06-15|girish@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Schematic|Drafting|8|0
+2018-06-16|girish@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Schematic|Drafting|8|0
+2018-06-18|girish@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Schematic|Drafting|6|0
+2018-06-18|girish@innotechconsult.in|Projects|IECP-142-NANDI-PH2|Schematic|Drafting|2|0
+2018-06-19|girish@innotechconsult.in|Projects|IECP-142-NANDI-PH2|Schematic|Drafting|2|0
+2018-06-19|girish@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Schematic|Drafting|6|0
+2018-06-08|kumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Drafting|7|1
+2018-06-08|kumar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|1|30
+2018-06-11|kumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Drafting|8|1
+2018-06-11|kumar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|2|1
+2018-06-12|kumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Drafting|9|1
+2018-06-08|harishm@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|Concept|Drafting|7|0
+2018-06-08|harishm@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|2|15
+2018-06-11|harishm@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Concept|Drafting|2|0
+2018-06-11|harishm@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Drafting|7|15
+2018-06-12|harishm@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Concept|Drafting|6|0
+2018-06-12|harishm@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Concept|Drafting|3|15
+2018-06-13|harishm@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|Concept|Drafting|8|0
+2018-06-13|harishm@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Concept|Drafting|4|15
+2018-06-08|nagasindhu@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|9|10
+2018-06-11|nagasindhu@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|8|25
+2018-06-12|nagasindhu@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|1|45
+2018-06-12|nagasindhu@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Tender|QS Team|5|15
+2018-06-12|nagasindhu@innotechconsult.in|Projects|IECP-213-BOSCH-TRN CETRE|Tender|QS Team|3|10
+2018-06-13|nagasindhu@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Tender|QS Team|9|19
+2018-06-14|nagasindhu@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Tender|QS Team|8|30
+2018-06-14|nagasindhu@innotechconsult.in|Projects|IECP-140-School|Tender|QS Team|1|0
+2018-06-15|nagasindhu@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Tender|QS Team|11|5
+2018-06-16|nagasindhu@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Tender|QS Team|1|45
+2018-06-16|nagasindhu@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|QS Team|7|15
+2018-06-18|nagasindhu@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|QS Team|8|45
+2018-06-19|nagasindhu@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Tender|QS Team|9|39
+2018-06-08|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|9|30
+2018-06-11|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|9|40
+2018-06-12|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|9|30
+2018-06-13|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|9|0
+2018-06-14|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|10|0
+2018-06-15|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|9|30
+2018-06-15|nikhilaar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|QS Team|1|0
+2018-06-16|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|8|30
+2018-06-16|nikhilaar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|QS Team|1|0
+2018-06-18|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|9|45
+2018-06-19|nikhilaar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|QS Team|9|40
+2018-06-08|hemavathi@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Drafting|8|1
+2018-06-11|hemavathi@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Drafting|8|45
+2018-06-12|hemavathi@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Drafting|8|45
+2018-06-13|hemavathi@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Drafting|4|0
+2018-06-13|hemavathi@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|5|0
+2018-06-14|hemavathi@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Drafting|8|45
+2018-06-15|hemavathi@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Drafting|8|45
+2018-06-18|hemavathi@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|4|30
+2018-06-18|hemavathi@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Drafting|4|0
+2018-06-08|chandrashekar@innotechconsult.in|Projects|IECP-142-NANDI-PH2|Execution|Drafting|7|30
+2018-06-08|chandrashekar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|DD|Drafting|2|0
+2018-06-11|chandrashekar@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|DD|Drafting|3|0
+2018-06-11|chandrashekar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|6|0
+2018-06-12|chandrashekar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|5|0
+2018-06-12|chandrashekar@innotechconsult.in|Projects|IECP-142-NANDI-PH2|Execution|Drafting|4|0
+2018-06-13|chandrashekar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|0|30
+2018-06-13|chandrashekar@innotechconsult.in|Projects|IECP-214- SANDS INFRA|Execution|Drafting|0|30
+2018-06-13|chandrashekar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|7|30
+2018-06-13|chandrashekar@innotechconsult.in|Projects|IECP-142-NANDI-PH2|DD|Drafting|0|30
+2018-06-14|chandrashekar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|8|0
+2018-06-14|chandrashekar@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|Execution|Drafting|0|30
+2018-06-14|chandrashekar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|0|30
+2018-06-15|chandrashekar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|1|0
+2018-06-15|chandrashekar@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|Execution|Drafting|0|30
+2018-06-15|chandrashekar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|2|0
+2018-06-15|chandrashekar@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Tender|Drafting|6|0
+2018-06-16|chandrashekar@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Tender|Drafting|8|30
+2018-06-18|chandrashekar@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Tender|Drafting|8|30
+2018-06-08|vijayasimha@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Drafting|9|1
+2018-06-14|vijayasimha@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|6|1
+2018-06-14|vijayasimha@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|3|1
+2018-06-15|vijayasimha@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Concept|Drafting|8|30
+2018-06-15|vijayasimha@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|1|1
+2018-06-16|vijayasimha@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|5|1
+2018-06-16|vijayasimha@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|4|1
+2018-06-08|sandeepkumar@innotechconsult.in|Projects|IECP-228-SMR VINAY-STANLEY|Execution|Drafting|4|5
+2018-06-08|sandeepkumar@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Drafting|4|45
+2018-06-11|sandeepkumar@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|DD|Drafting|5|1
+2018-06-11|sandeepkumar@innotechconsult.in|Projects|IECP-228-SMR VINAY-STANLEY|DD|Drafting|4|1
+2018-06-12|sandeepkumar@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|DD|Drafting|5|1
+2018-06-12|sandeepkumar@innotechconsult.in|Projects|IECP-228-SMR VINAY-STANLEY|DD|Drafting|4|1
+2018-06-13|sandeepkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|4|45
+2018-06-13|sandeepkumar@innotechconsult.in|Projects|IECP-228-SMR VINAY-STANLEY|DD|Drafting|4|20
+2018-06-14|sandeepkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|4|45
+2018-06-14|sandeepkumar@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|DD|Drafting|4|25
+2018-06-15|sandeepkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|4|1
+2018-06-15|sandeepkumar@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Drafting|5|45
+2018-06-16|sandeepkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Drafting|4|1
+2018-06-16|sandeepkumar@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|DD|Drafting|4|1
+2018-06-16|sandeepkumar@innotechconsult.in|Projects|IECP-228-SMR VINAY-STANLEY|DD|Drafting|1|0
+2018-06-18|sandeepkumar@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|4|1
+2018-06-08|shwethabp@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|DD|Drafting|8|45
+2018-06-12|shwethabp@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|DD|Drafting|5|0
+2018-06-12|shwethabp@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|DD|Drafting|3|45
+2018-06-11|shwethabp@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|DD|Drafting|8|45
+2018-06-13|shwethabp@innotechconsult.in|Projects|IECP-214- SANDS INFRA|DD|Drafting|4|0
+2018-06-13|shwethabp@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|DD|Drafting|4|45
+2018-06-14|shwethabp@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|DD|Drafting|9|0
+2018-06-15|shwethabp@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Drafting|4|0
+2018-06-15|shwethabp@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|DD|Drafting|4|45
+2018-06-16|shwethabp@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|DD|Drafting|8|45
+2018-06-18|shwethabp@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|DD|Drafting|8|45
+2018-06-19|shwethabp@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|DD|Drafting|8|45
+2018-06-08|sandhya@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|8|45
+2018-06-11|sandhya@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|8|50
+2018-06-12|sandhya@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|8|50
+2018-06-13|sandhya@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|8|50
+2018-06-14|sandhya@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|8|50
+2018-06-15|sandhya@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|5|50
+2018-06-15|sandhya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|3|0
+2018-06-18|sandhya@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|8|55
+2018-06-19|sandhya@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|8|55
+2018-06-08|devika@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Drafting|9|0
+2018-06-18|devika@innotechconsult.in|Projects|IECP-224-MANGADU|Execution|Drafting|2|0
+2018-06-18|devika@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Execution|Drafting|7|30
+2018-06-16|devika@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Execution|Drafting|8|45
+2018-06-15|devika@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Drafting|3|0
+2018-06-15|devika@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Execution|Drafting|6|30
+2018-06-14|devika@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|6|0
+2018-06-14|devika@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Execution|Drafting|2|45
+2018-06-13|devika@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Drafting|5|0
+2018-06-12|devika@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Drafting|8|45
+2018-06-11|devika@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Drafting|9|0
+2018-06-19|devika@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Execution|Drafting|4|30
+2018-06-19|devika@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Drafting|4|30
+2018-06-11|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|8|55
+2018-06-12|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|7|10
+2018-06-12|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|2|5
+2018-06-08|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|7|0
+2018-06-08|bhagya@innotechconsult.in|Projects|IECP-214- SANDS INFRA|Execution|Drafting|2|0
+2018-06-13|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|8|55
+2018-06-14|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|7|45
+2018-06-14|bhagya@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Drafting|1|15
+2018-06-15|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|5|45
+2018-06-15|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|3|0
+2018-06-16|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|3|45
+2018-06-16|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|4|0
+2018-06-16|bhagya@innotechconsult.in|Projects|IECP-214- SANDS INFRA|Execution|Drafting|1|0
+2018-06-18|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|4|0
+2018-06-19|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Drafting|4|45
+2018-06-19|bhagya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|4|10
+2018-06-08|sudhaj@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|DD|Drafting|8|30
+2018-06-11|sudhaj@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|8|30
+2018-06-12|sudhaj@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|8|30
+2018-06-13|sudhaj@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|8|30
+2018-06-14|sudhaj@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|8|30
+2018-06-15|sudhaj@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|8|0
+2018-06-16|sudhaj@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Drafting|6|30
+2018-06-13|dhanyakumar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design|8|15
+2018-06-14|dhanyakumar@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|8|40
+2018-06-08|dhanyakumar@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|8|1
+2018-06-11|dhanyakumar@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|8|1
+2018-06-12|dhanyakumar@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|8|1
+2018-06-09|dhanyakumar@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|DD|Design|2|1
+2018-06-15|dhanyakumar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design|8|0
+2018-06-16|dhanyakumar@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design|5|0
+2018-06-16|dhanyakumar@innotechconsult.in|Projects|IECP-244 COMMER  PROJ  JC RD BLORE|Concept|Design|3|0
+2018-06-08|anilkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Design|9|0
+2018-06-11|anilkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Design|9|0
+2018-06-12|anilkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Design|8|0
+2018-06-12|anilkumar@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Design|1|1
+2018-06-13|anilkumar@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Design|1|0
+2018-06-13|anilkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Design|8|0
+2018-06-14|anilkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Design|9|0
+2018-06-15|anilkumar@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Design|9|0
+2018-06-16|anilkumar@innotechconsult.in|Projects|IECP-250-ETV-BLK9-JPMC|Concept|Design|9|0
+2018-06-08|sanathkumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design|8|45
+2018-06-11|sanathkumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design|9|15
+2018-06-12|sanathkumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design|9|15
+2018-06-13|sanathkumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design|8|45
+2018-06-14|sanathkumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design|8|45
+2018-06-15|sanathkumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design|9|15
+2018-06-18|sanathkumar@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design|6|45
+2018-06-18|sanathkumar@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Design|1|0
+2018-06-18|sanathkumar@innotechconsult.in|Projects|IECP-211-RESI APT AT HYD|Execution|Design|1|0
+2018-06-19|sanathkumar@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|9|0
+2018-06-08|ambrish@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Design|8|45
+2018-06-11|ambrish@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Design|8|45
+2018-06-12|ambrish@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Design|8|4.5
+2018-06-12|asgher@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|DD|Design|6|1
+2018-06-12|asgher@innotechconsult.in|Projects|IECP-248 SATTVA KNOWLEDGE PARK|DD|Design|1|30
+2018-06-11|asgher@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design|6|1
+2018-06-11|asgher@innotechconsult.in|Projects|IECP-176-CHIRPPING WOODS|Execution|Design management & co-ordination|1|1
+2018-06-08|asgher@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Design|6|1
+2018-06-08|asgher@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|DD|Design|1|30
+2018-06-13|asgher@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|DD|Design|5|0
+2018-06-13|asgher@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|DD|Design|3|0
+2018-06-13|manoj@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Design|8|30
+2018-06-08|manoj@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Design|8|30
+2018-06-12|manoj@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Design|8|30
+2018-06-11|manoj@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Design|8|30
+2018-06-08|ambarishv@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|DD|Design|8|45
+2018-06-11|ambarishv@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|DD|Design|8|45
+2018-06-12|ambarishv@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|DD|Drafting|8|45
+2018-06-13|ambarishv@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|DD|Design|8|45
+2018-06-12|ramachandra@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design|8|30
+2018-06-11|ramachandra@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design|8|30
+2018-06-08|ramachandra@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design|8|30
+2018-06-13|ramachandra@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design|8|30
+2018-06-14|ramachandra@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design|8|30
+2018-06-15|ramachandra@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|DD|Design|8|30
+2018-06-16|ramachandra@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|DD|Design|8|30
+2018-06-08|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Concept|Design|8|30
+2018-06-09|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Concept|Design|7|1
+2018-06-11|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|8|30
+2018-06-12|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|8|30
+2018-06-13|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|10|0
+2018-06-14|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|10|1
+2018-06-15|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|10|1
+2018-06-16|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|10|1
+2018-06-18|suprith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|8|30
+2018-06-13|umashankar@innotechconsult.in|Projects|IECP-142-NANDI-PH2|Concept|Design management & co-ordination|4|1
+2018-06-12|umashankar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design|4|0
+2018-06-11|umashankar@innotechconsult.in|Projects|IECP-151A-Bosch NHP 704a|Tender|External Meeting|8|30
+2018-06-08|umashankar@innotechconsult.in|Projects|IECP-151A-Bosch NHP 704a|DD|Design|6|0
+2018-06-08|umashankar@innotechconsult.in|Projects|IECP-142-NANDI-PH2|Execution|Design|1|30
+2018-06-15|umashankar@innotechconsult.in|Projects|IECP-202-RMZ INFINITY|DD|Design|8|30
+2018-06-14|umashankar@innotechconsult.in|Projects|IECP-202-RMZ INFINITY|DD|Design|4|30
+2018-06-14|umashankar@innotechconsult.in|Projects|IECP-140-School|Concept|Design|4|0
+2018-06-13|umashankar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design|4|30
+2018-06-12|umashankar@innotechconsult.in|Projects|IECP-151A-Bosch NHP 704-ETX|Tender|Design|4|30
+2018-06-11|manu@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|8|50
+2018-06-12|manu@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|9|1
+2018-06-13|manu@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|8|50
+2018-06-14|manu@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|9|0
+2018-06-15|manu@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|10|0
+2018-06-16|manu@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|9|1
+2018-06-18|manu@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|9|0
+2018-06-19|manu@innotechconsult.in|Projects|IECP-140- IT Sector-Ph3|Execution|Design|9|0
+2018-06-08|santhoshm@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|9|0
+2018-06-12|santhoshm@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|11|0
+2018-06-11|santhoshm@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|9|0
+2018-06-18|santhoshm@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|9|0
+2018-06-16|santhoshm@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|9|0
+2018-06-15|santhoshm@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|11|0
+2018-06-14|santhoshm@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|11|0
+2018-06-13|santhoshm@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|11|0
+2018-06-08|lavanya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Tender|QS Team|8|50
+2018-06-11|lavanya@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Tender|QS Team|3|0
+2018-06-11|lavanya@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|Tender|QS Team|5|45
+2018-06-12|lavanya@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|Tender|QS Team|8|45
+2018-06-13|lavanya@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|Tender|QS Team|8|45
+2018-06-14|lavanya@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|Tender|QS Team|8|45
+2018-06-15|lavanya@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|Tender|QS Team|8|50
+2018-06-16|lavanya@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|Tender|QS Team|8|30
+2018-06-18|lavanya@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|DD|QS Team|8|45
+2018-06-19|lavanya@innotechconsult.in|Projects|IECP-195-FELIZ TOWERS|Tender|QS Team|9|10
+2018-06-08|keshavabharadwaj@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|7|0
+2018-06-08|keshavabharadwaj@innotechconsult.in|Projects|IECP-220-PETZ|Tender|QS Team|1|30
+2018-06-08|keshavabharadwaj@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|QS Team|0|30
+2018-06-11|keshavabharadwaj@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|8|45
+2018-06-12|keshavabharadwaj@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|9|0
+2018-06-13|keshavabharadwaj@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|QS Team|1|30
+2018-06-13|keshavabharadwaj@innotechconsult.in|Projects|IECP-140-School|Tender|QS Team|4|0
+2018-06-13|keshavabharadwaj@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|1|0
+2018-06-13|keshavabharadwaj@innotechconsult.in|Projects|General Meetings|Concept|QS Team|2|0
+2018-06-14|keshavabharadwaj@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|6|0
+2018-06-14|keshavabharadwaj@innotechconsult.in|Projects|IECP-250-ETV-BLK9-JPMC|Concept|QS Team|2|30
+2018-06-15|keshavabharadwaj@innotechconsult.in|Projects|IECP-140-School|Tender|QS Team|4|0
+2018-06-15|keshavabharadwaj@innotechconsult.in|Projects|General Meetings|Products and softwares|QS Team|2|0
+2018-06-15|keshavabharadwaj@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|2|30
+2018-06-18|keshavabharadwaj@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|QS Team|7|0
+2018-06-18|keshavabharadwaj@innotechconsult.in|Projects|IECP-224-MANGADU|Tender|QS Team|1|0
+2018-06-18|keshavabharadwaj@innotechconsult.in|Projects|IECP-140-School|Tender|QS Team|0|30
+2018-06-08|swati@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|9|0
+2018-06-11|swati@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|10|30
+2018-06-12|swati@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|3|0
+2018-06-12|swati@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|QS Team|5|45
+2018-06-15|swati@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|QS Team|11|1
+2018-06-13|swati@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|QS Team|9|0
+2018-06-14|swati@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|QS Team|5|0
+2018-06-08|vinothkumar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|DD|QS Team|8|45
+2018-06-11|vinothkumar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|8|45
+2018-06-12|vinothkumar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|9|1
+2018-06-13|vinothkumar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|8|45
+2018-06-14|vinothkumar@innotechconsult.in|Projects|IECP-182-GREENFIELD PH2|Execution|QS Team|10|0
+2018-06-15|vinothkumar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|QS Team|9|30
+2018-06-16|vinothkumar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|QS Team|8|1
+2018-06-18|vinothkumar@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|QS Team|10|1
+2018-06-08|murugesan@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|8|15
+2018-06-12|murugesan@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|8|15
+2018-06-13|murugesan@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|9|0
+2018-06-14|murugesan@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|9|0
+2018-06-15|murugesan@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|9|45
+2018-06-16|murugesan@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|8|0
+2018-06-19|murugesan@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|QS Team|8|15
+2018-06-08|adarsh@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|9|0
+2018-06-11|adarsh@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|8|45
+2018-06-12|adarsh@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|10|0
+2018-06-13|adarsh@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|9|0
+2018-06-14|adarsh@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|11|0
+2018-06-15|adarsh@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|9|0
+2018-06-16|adarsh@innotechconsult.in|Projects|IECP-140-South parcel|DD|Design|8|45
+2018-06-08|prathikn@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design|8|45
+2018-06-11|prathikn@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design|9|5
+2018-06-12|prathikn@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design|8|0
+2018-06-13|prathikn@innotechconsult.in|Projects|IECP-221-VILLAS AT VIZAG|Execution|Design|9|1
+2018-06-14|prathikn@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Design|10|30
+2018-06-15|prathikn@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|DD|Design|10|30
+2018-06-08|gurukiran@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design management & co-ordination|5|20
+2018-06-08|gurukiran@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design management & co-ordination|3|40
+2018-06-11|gurukiran@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design management & co-ordination|4|15
+2018-06-11|gurukiran@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design|1|15
+2018-06-11|gurukiran@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design management & co-ordination|2|30
+2018-06-11|gurukiran@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Documentation|1|15
+2018-06-12|gurukiran@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design management & co-ordination|3|40
+2018-06-12|gurukiran@innotechconsult.in|Projects|General Meetings|Execution|External Meeting|5|40
+2018-06-13|gurukiran@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design management & co-ordination|2|20
+2018-06-13|gurukiran@innotechconsult.in|Projects|IECP-244 COMMER  PROJ  JC RD BLORE|Concept|Design management & co-ordination|3|40
+2018-06-13|gurukiran@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design management & co-ordination|2|40
+2018-06-14|gurukiran@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Execution|Design management & co-ordination|2|30
+2018-06-14|gurukiran@innotechconsult.in|Projects|other  projects with out iecpl number|DD|Documentation|5|1
+2018-06-14|gurukiran@innotechconsult.in|Projects|other  projects with out iecpl number|Completion|Documentation|1|0
+2018-06-15|gurukiran@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Site supervision and inspection|3|40
+2018-06-15|gurukiran@innotechconsult.in|Projects|IECP-164-BIG BANG|Execution|Site supervision and inspection|3|10
+2018-06-15|gurukiran@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Documentation|2|40
+2018-06-16|gurukiran@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Documentation|2|40
+2018-06-16|gurukiran@innotechconsult.in|Projects|IECP-164-BIG BANG|Execution|Documentation|2|30
+2018-06-16|gurukiran@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|Documentation|3|40
+2018-06-18|gurukiran@innotechconsult.in|Projects|General Meetings|Execution|Internal|1|30
+2018-06-18|gurukiran@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|Documentation|1|40
+2018-06-18|gurukiran@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Documentation|4|30
+2018-06-18|gurukiran@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Documentation|1|15
+2018-06-11|hareesh@innotechconsult.in|Projects|General Meetings|Execution|Design management & co-ordination|0|30
+2018-06-11|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|2|0
+2018-06-12|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|4|15
+2018-06-12|hareesh@innotechconsult.in|Projects|General Meetings|Execution|Design management & co-ordination|4|30
+2018-06-13|hareesh@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|Design management & co-ordination|6|15
+2018-06-13|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|2|30
+2018-06-08|hareesh@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|Design management & co-ordination|4|30
+2018-06-14|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|4|0
+2018-06-14|hareesh@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|Design management & co-ordination|4|30
+2018-06-14|hareesh@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|DD|Design management & co-ordination|0|15
+2018-06-08|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|2|0
+2018-06-16|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|1|30
+2018-06-15|hareesh@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|External Meeting|4|15
+2018-06-15|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|3|0
+2018-06-16|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design|1|0
+2018-06-16|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|External|1|0
+2018-06-16|hareesh@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|External Meeting|4|0
+2018-06-18|hareesh@innotechconsult.in|Projects|General Meetings|Execution|Internal Meeting|1|20
+2018-06-18|hareesh@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|Design management & co-ordination|4|0
+2018-06-18|hareesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|1|0
+2018-06-18|hareesh@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design management & co-ordination|2|0
+2018-06-08|aruna@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design management & co-ordination|9|0
+2018-06-11|aruna@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design management & co-ordination|2|0
+2018-06-11|aruna@innotechconsult.in|Projects|General Meetings|Schematic|Design management & co-ordination|3|1
+2018-06-11|aruna@innotechconsult.in|Projects|IECP-250-ETV-BLK9-JPMC|Concept|External Meeting|3|1
+2018-06-12|aruna@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design management & co-ordination|4|1
+2018-06-12|aruna@innotechconsult.in|Projects|IECP-238-GOOGLE INDIA|Schematic|Internal Meeting|2|1
+2018-06-12|aruna@innotechconsult.in|Projects|IECP-250-ETV-BLK9-JPMC|Concept|Design management & co-ordination|2|0
+2018-06-13|aruna@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Documentation|3|0
+2018-06-14|aruna@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design management & co-ordination|2|1
+2018-06-14|aruna@innotechconsult.in|Projects|IECP-246-Phoenix Halcyon-Fuji at Hyd|Concept|Design management & co-ordination|2|1
+2018-06-14|aruna@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Design management & co-ordination|2|1
+2018-06-14|aruna@innotechconsult.in|Projects|IECP-238-GOOGLE INDIA|Schematic|Design management & co-ordination|2|1
+2018-06-08|sowmith@innotechconsult.in|Projects|IECP-220-PETZ|Execution|Design|3|45
+2018-06-09|sowmith@innotechconsult.in|Projects|IECP-249 Resi Proj at Kokapet, Hyd|Concept|Design|5|0
+2018-06-09|sowmith@innotechconsult.in|Projects|IECP-247 Phoenix 285  - Phase 1 at Hyd|Tender|Design|2|30
+2018-06-11|sowmith@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design|8|30
+2018-06-12|sowmith@innotechconsult.in|Projects|IECP-220-PETZ|Execution|Design|4|30
+2018-06-12|sowmith@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design|5|30
+2018-06-18|sowmith@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design|8|30
+2018-06-16|sowmith@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design|6|30
+2018-06-16|sowmith@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|Design|3|1
+2018-06-15|sowmith@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design|9|1
+2018-06-08|eswar@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|9|1
+2018-06-09|eswar@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|4|30
+2018-06-11|eswar@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|10|30
+2018-06-12|eswar@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|10|0
+2018-06-13|eswar@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|6|0
+2018-06-13|eswar@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|4|1
+2018-06-14|eswar@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|6|0
+2018-06-14|eswar@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|4|1
+2018-06-08|ravikiran@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Drafting|4|30
+2018-06-08|ravikiran@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|4|0
+2018-06-09|ravikiran@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|6|0
+2018-06-11|ravikiran@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|Execution|Drafting|8|30
+2018-06-12|ravikiran@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|8|0
+2018-06-12|ravikiran@innotechconsult.in|Projects|IECP-233-ETV-3B|DD|Drafting|1|0
+2018-06-13|ravikiran@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|9|30
+2018-06-14|ravikiran@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|4|30
+2018-06-14|ravikiran@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|4|30
+2018-06-15|ravikiran@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|9|30
+2018-06-16|ravikiran@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|9|0
+2018-06-18|ravikiran@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|4|30
+2018-06-18|ravikiran@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|4|0
+2018-06-19|ravikiran@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|8|30
+2018-06-13|sreenivasa@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|External Meeting|3|0
+2018-06-11|sreenivasa@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Internal Meeting|1|0
+2018-06-11|sreenivasa@innotechconsult.in|Projects|IECP-176-CHIRPPING WOODS|Execution|External Meeting|1|0
+2018-06-11|sreenivasa@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|External Meeting|4|0
+2018-06-12|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Design management & co-ordination|3|1
+2018-06-12|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design management & co-ordination|3|1
+2018-06-12|thejesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|2|1
+2018-06-11|thejesh@innotechconsult.in|Projects|IECP-224-MANGADU|DD|External Meeting|5|1
+2018-06-11|thejesh@innotechconsult.in|Projects|IECP-246-Phoenix Halcyon-Fuji at Hyd|Concept|Design management & co-ordination|2|0
+2018-06-11|thejesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|1|0
+2018-06-13|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Design management & co-ordination|4|1
+2018-06-13|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design management & co-ordination|4|1
+2018-06-14|thejesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Execution|Design management & co-ordination|4|0
+2018-06-14|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design management & co-ordination|4|0
+2018-06-08|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design management & co-ordination|2|0
+2018-06-08|thejesh@innotechconsult.in|Projects|other  projects with out iecpl number|Completion|External Meeting|6|0
+2018-06-15|thejesh@innotechconsult.in|Projects|IECP-224-MANGADU|DD|Design management & co-ordination|4|1
+2018-06-16|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Design management & co-ordination|2|0
+2018-06-16|thejesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|Tender|Design management & co-ordination|4|0
+2018-06-16|thejesh@innotechconsult.in|Projects|IECP-224-MANGADU|DD|Design management & co-ordination|3|0
+2018-06-18|thejesh@innotechconsult.in|Projects|IECP-182-GREENFIELD-PH1|DD|Design management & co-ordination|4|0
+2018-06-18|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH3|Execution|Design management & co-ordination|4|0
+2018-06-19|thejesh@innotechconsult.in|Projects|IECP-112-RAINBOW-PH2|Execution|Design management & co-ordination|4|0
+2018-06-19|thejesh@innotechconsult.in|Projects|IECP-224-MANGADU|Tender|Design management & co-ordination|4|0
+2018-06-16|ramya@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Drafting|7|1
+2018-06-16|ramya@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|QS Team|1|30
+2018-06-16|ramya@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|External|0|30
+2018-06-18|ramya@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|QS Team|1|1
+2018-06-18|ramya@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Internal|0|30
+2018-06-18|ramya@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Site supervision and inspection|1|1
+2018-06-18|ramya@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Drafting|6|0
+2018-06-19|ramya@innotechconsult.in|Projects|IECP-142-NANDI-PH2|Schematic|Drafting|2|1
+2018-06-19|ramya@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Drafting|4|1
+2018-06-19|ramya@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|QS Team|3|1
+2018-06-08|anusha@innotechconsult.in|Projects|IECP-233-ETV-3B|DD|Design management & co-ordination|2|0
+2018-06-08|anusha@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|3|0
+2018-06-08|anusha@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Design management & co-ordination|2|0
+2018-06-08|anusha@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design management & co-ordination|1|0
+2018-06-08|anusha@innotechconsult.in|Projects|General Meetings|Execution|Internal Meeting|1|0
+2018-06-11|anusha@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|2|0
+2018-06-11|anusha@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Design management & co-ordination|1|0
+2018-06-11|anusha@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Design management & co-ordination|2|0
+2018-06-11|anusha@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design management & co-ordination|2|0
+2018-06-11|anusha@innotechconsult.in|Projects|General Meetings|Execution|QS Team|0|30
+2018-06-12|anusha@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|1|0
+2018-06-12|anusha@innotechconsult.in|Projects|IECP-233-ETV-3B|DD|Design management & co-ordination|3|0
+2018-06-12|anusha@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design management & co-ordination|3|0
+2018-06-12|anusha@innotechconsult.in|Projects|General Meetings|Execution|QS Team|1|0
+2018-06-13|anusha@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|3|0
+2018-06-13|anusha@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Design management & co-ordination|5|45
+2018-06-14|anusha@innotechconsult.in|Projects|IECP-233-ETV-3B|Execution|Design management & co-ordination|0|30
+2018-06-14|anusha@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design management & co-ordination|1|0
+2018-06-14|anusha@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|3|30
+2018-06-14|anusha@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Design management & co-ordination|3|0
+2018-06-14|anusha@innotechconsult.in|Projects|General Meetings|Execution|QS Team|1|0
+2018-06-15|anusha@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Tender|Design management & co-ordination|5|0
+2018-06-15|anusha@innotechconsult.in|Projects|IECP-233-ETV-3B|Execution|Design management & co-ordination|1|0
+2018-06-15|anusha@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|3|0
+2018-06-16|anusha@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Tender|Design management & co-ordination|3|30
+2018-06-18|anusha@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|3|0
+2018-06-18|anusha@innotechconsult.in|Projects|IECP-143-TECHNOSTAR|Execution|Design management & co-ordination|1|15
+2018-06-18|anusha@innotechconsult.in|Projects|IECP-233-ETV-3B|Execution|Design management & co-ordination|0|30
+2018-06-18|anusha@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Concept|Design management & co-ordination|3|30
+2018-06-18|anusha@innotechconsult.in|Projects|General Meetings|Execution|QS Team|0|30
+2018-06-19|anusha@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|7|0
+2018-06-19|anusha@innotechconsult.in|Projects|IECP-239-CONCORD-MAYFAIR|Tender|Design management & co-ordination|1|0
+2018-06-19|anusha@innotechconsult.in|Projects|IECP-233-ETV-3B|Execution|Design management & co-ordination|1|0
+2018-06-19|anusha@innotechconsult.in|Projects|General Meetings|Execution|QS Team|1|0
+2018-06-08|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|9|0
+2018-06-09|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|3|30
+2018-06-11|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|9|0
+2018-06-12|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|8|0
+2018-06-12|joshi@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|1|0
+2018-06-13|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|6|30
+2018-06-13|joshi@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|4|0
+2018-06-14|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|6|0
+2018-06-14|joshi@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|4|0
+2018-06-15|joshi@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|5|1
+2018-06-15|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|5|0
+2018-06-16|joshi@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|3|30
+2018-06-16|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|3|0
+2018-06-19|joshi@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Drafting|1|0
+2018-06-19|joshi@innotechconsult.in|Projects|IECP-236-MICROSOFT HYD|DD|Drafting|4|0
+2018-06-19|joshi@innotechconsult.in|Projects|IECP-245-RMZNEXITY-HYD|Tender|Drafting|6|30
+2018-06-11|tukarama@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|Execution|Documentation|2|0
+2018-06-11|tukarama@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|External Meeting|4|0
+2018-06-11|tukarama@innotechconsult.in|Projects|IECP-176-CHIRPPING WOODS|Execution|Site visit|3|0
+2018-06-08|tukarama@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|Execution|Documentation|2|0
+2018-06-08|tukarama@innotechconsult.in|Projects|Other technical work|Execution|Documentation|6|1
+2018-06-12|tukarama@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|External Meeting|4|0
+2018-06-13|tukarama@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|External Meeting|4|0
+2018-06-13|tukarama@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|Execution|External Meeting|5|0
+2018-06-14|tukarama@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Design management & co-ordination|2|0
+2018-06-14|tukarama@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|Execution|Design management & co-ordination|6|0
+2018-06-12|tukarama@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|External Meeting|5|30
+2018-06-15|tukarama@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|DD|Design management & co-ordination|6|0
+2018-06-15|tukarama@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Design management & co-ordination|2|0
+2018-06-15|tukarama@innotechconsult.in|Projects|IECP-117-BLVD|Execution|Design management & co-ordination|1|0
+2018-06-14|tukarama@innotechconsult.in|Projects|IECP-158-CENTURY BREEZ|Execution|Design management & co-ordination|1|0
+2018-06-08|tukarama@innotechconsult.in|Projects|IECP-176-CHIRPPING WOODS|Execution|Design management & co-ordination|1|0
+2018-06-18|tukarama@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|DD|Design management & co-ordination|4|0
+2018-06-18|tukarama@innotechconsult.in|Projects|IECP-191-SOUTHERN CREST|Execution|Site supervision and inspection|4|0
+2018-06-18|tukarama@innotechconsult.in|Projects|IECP-158-CENTURY BREEZ|Execution|Design management & co-ordination|1|0
+2018-06-19|tukarama@innotechconsult.in|Projects|IECP-139-ETHOS-PH-I|Execution|Site supervision and inspection|7|0
+2018-06-19|tukarama@innotechconsult.in|Projects|IECP-176-CHIRPPING WOODS|Execution|Design management & co-ordination|1|0
+2018-06-19|tukarama@innotechconsult.in|Projects|IECP-158-CENTURY BREEZ|Execution|Site supervision and inspection|1|0
+2018-06-08|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Design|8|45
+2018-06-11|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Design|8|45
+2018-06-12|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Design|8|45
+2018-06-13|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3A|Tender|Design|8|45
+2018-06-14|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Design|8|45
+2018-06-15|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Design|8|45
+2018-06-16|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Documentation|4|0
+2018-06-16|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Design|4|45
+2018-06-18|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Documentation|4|45
+2018-06-18|shivarajkumar@innotechconsult.in|Projects|IECP-233-ETV-3B|Tender|Design|4|0
+2018-06-08|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Design management & co-ordination|4|20
+2018-06-08|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|DD|Design management & co-ordination|4|25
+2018-06-11|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|DD|Design management & co-ordination|4|45
+2018-06-11|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Design management & co-ordination|3|30
+2018-06-11|navaneeth@innotechconsult.in|Projects|IECP-246-Phoenix Halcyon-Fuji at Hyd|Execution|Documentation|0|30
+2018-06-12|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|External Meeting|5|0
+2018-06-12|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|DD|Design management & co-ordination|3|45
+2018-06-13|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Design management & co-ordination|2|15
+2018-06-13|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design management & co-ordination|3|0
+2018-06-13|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|DD|Design management & co-ordination|2|0
+2018-06-14|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Design management & co-ordination|6|0
+2018-06-14|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|DD|Design management & co-ordination|2|0
+2018-06-15|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Design management & co-ordination|6|15
+2018-06-15|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design management & co-ordination|2|30
+2018-06-16|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design management & co-ordination|5|45
+2018-06-16|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Design management & co-ordination|2|30
+2018-06-18|navaneeth@innotechconsult.in|Projects|General Meetings|Execution|Internal Meeting|1|30
+2018-06-18|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Documentation|2|15
+2018-06-18|navaneeth@innotechconsult.in|Projects|other  projects with out iecpl number|DD|Documentation|0|30
+2018-06-18|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|Execution|Design management & co-ordination|4|0
+2018-06-19|navaneeth@innotechconsult.in|Projects|IECP-210-M3 - PARCEL 1&2|DD|Design management & co-ordination|3|30
+2018-06-19|navaneeth@innotechconsult.in|Projects|IECP-242-ROHAN UPAVAN|DD|Design management & co-ordination|4|45
+2018-06-08|shivaprasad@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Completion|Documantation|8|30
+2018-06-11|shivaprasad@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Completion|Documentation|8|30
+2018-06-12|shivaprasad@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Completion|Documentation|3|0
+2018-06-12|shivaprasad@innotechconsult.in|Projects|other  projects with out iecpl number|Execution|Site supervision and inspection|5|40
+2018-06-13|shivaprasad@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Site supervision and inspection|8|35
+2018-06-14|shivaprasad@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Site supervision and inspection|8|30
+2018-06-15|shivaprasad@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Site supervision and inspection|8|25
+2018-06-16|shivaprasad@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design management & co-ordination|3|45
+2018-06-16|shivaprasad@innotechconsult.in|Projects|IECP-227-ESTZ CHENNAI|Execution|Documentation|4|50
+2018-06-12|prashanth@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design|8|10
+2018-06-08|prashanth@innotechconsult.in|Projects|IECP-140-Retail-Mall-Hotel|Execution|Design management & co-ordination|4|30
+2018-06-08|prashanth@innotechconsult.in|Projects|IECP-140-South parcel|Execution|Design management & co-ordination|4|20

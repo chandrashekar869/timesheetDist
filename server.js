@@ -2,6 +2,7 @@ var express=require('express');
 var bodyParser = require('body-parser');
 var cors = require('cors');
 var app = express();
+var fs=require('fs');
 var mongoose = require('mongoose');
 var jwt=require('jsonwebtoken');
 var key="TIMESHEET_DEVELOPMENT_KEY";
@@ -867,6 +868,40 @@ router.route('/approver')
         }
     });
     
+});
+router.route('/genReport')
+.post(function(req,res){
+    var reportData=JSON.parse(decodeURIComponent(req.body.report));
+    var startDate=new Date(reportData.startDate).getTime();
+    var endDate=new Date(reportData.endDate).getTime();
+    var textToWrite="Date|user|department|project|stage|task|hours|minutes"+"\n";
+    console.log("called");
+    model.find({},function(err,result){
+        if(err){
+            res.status(500).send("ERROR");                     
+        }
+        else{
+       result.map(function(callback,userIndex){
+         callback.data.map(function(element,dataIndex){
+             if(element.Taskname!=undefined && new Date(element.EntryForDate.split("T")[0]).getTime()>startDate && new Date(element.EntryForDate.split("T")[0]).getTime()<endDate )
+            textToWrite+=element.EntryForDate.split("T")[0]+"|"+callback.emailId+"|"+element.department+"|"+element.ProjectName+"|"+element.StageName+"|"+element.Taskname+"|"+element.TaskData.hours+"|"+element.TaskData.minutes+"\n";
+            if(userIndex==result.length-1 && dataIndex==callback.data.length-1)
+            {
+                fs.writeFile('reports.csv',textToWrite,function(err){
+                    console.log(__dirname);
+                    var file = __dirname + '/reports.csv';
+                    res.setHeader('Content-disposition', 'attachment; filename=reports.csv');
+                    res.setHeader('Content-type', 'text/csv');
+                    res.download(file, 'reports.csv');
+                    //    res.setHeader('Content-disposition', 'attachment; filename=reports.csv');
+                  //  res.setHeader('Content-type', 'text/csv');
+                    //res.sendFile(file);
+                });
+            }
+        });
+       });
+        }
+    });
 });
 
 function approverForAll(req,res,data,approve,reject){
