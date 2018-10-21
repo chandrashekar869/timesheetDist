@@ -862,7 +862,7 @@ router.route('/downloadReport')
 });
 });
 
-router.route('/generateReportTest')
+router.route('/generateReport')
 .get(function(req,res){
     var queryString=JSON.parse(decodeURIComponent(req.query['report']));
     console.log(queryString);
