@@ -852,6 +852,123 @@ router.route("/getInitData")
     });
 });
 
+router.route('/downloadReport')
+.get(function(req,res){
+    console.log(req.query['filename']);
+    res.setHeader('Content-Type', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
+    res.setHeader('Content-Disposition', 'attachment; filename=' + req.query['filename']);
+res.sendFile(path.join(__dirname +"/"+req.query['filename']),function(err){
+    console.log('---------- error downloading file: ' + err);
+});
+});
+
+router.route('/generateReportTest')
+.get(function(req,res){
+    var queryString=JSON.parse(decodeURIComponent(req.query['report']));
+    console.log(queryString);
+    adminModel.find({},(error,result)=>{
+        if(error || result.length==0)
+        res.status(500).send("An error occured");
+        else{
+            var adminData=result[0]["Departments"].filter(department=>department.hasOwnProperty(queryString.department))[0][queryString.department][queryString.filterParam];
+            if(adminData.length!=0){
+            model.find({},(error,userResult)=>{
+                if(error || userResult.length==0)
+                res.status(500).send("users not found");
+                else{
+                    //console.log(userResult);
+                    //res.send(userResult);
+                    generateReportByFilter(queryString,userResult,adminData,res);
+                }
+            });
+            }
+            else{
+                res.status(500).send("Admin Data not found");
+            }
+        }
+    });
+});
+
+function generateReportByFilter(queryString,users,adminData,res){
+// Require library
+var excel = require('excel4node');
+// Create a new instance of a Workbook class
+var workbook = new excel.Workbook();
+
+var style = workbook.createStyle({
+    font: {
+      color: '#FF0800',
+      size: 12
+    },
+    numberFormat: '$#,##0.00; ($#,##0.00); -'
+});
+var headers="Date|User|Department|Project|Stage|Task|Hours|Minutes".split("|");
+var startDate=new Date(queryString.startDate).getTime();
+var endDate=new Date(queryString.endDate).getTime();
+var hours=0;mins=0;
+adminData.map((aData,aDataIndex)=>{
+    var worksheet = workbook.addWorksheet(aData);
+    var row=1,col=1;
+    headers.map((header,index)=>{
+        worksheet.cell(row,col).string(header);
+        col++;
+    });
+    row++;
+    hours=0;mins=0;
+    users.map((user,index)=>{
+        if(user.data.length!=0){
+            user.data.map((userData,userDataIndex)=>{
+                col=1;
+                if(userData.department==queryString.department && userData[queryString.dataFilterParam]==aData &&  new Date(userData.EntryForDate.split("T")[0]).getTime()>startDate && new Date(userData.EntryForDate.split("T")[0]).getTime()<endDate)
+                {   
+                    hours=hours+userData.TaskData.hours;
+                    mins=mins+userData.TaskData.minutes;
+                    worksheet.cell(row,col).string(userData.EntryForDate.split("T")[0]);col++;
+                    worksheet.cell(row,col).string(user.emailId);col++;   
+                    worksheet.cell(row,col).string(userData.department);col++;
+                    worksheet.cell(row,col).string(userData.ProjectName);col++;
+                    worksheet.cell(row,col).string(userData.StageName);col++;
+                    worksheet.cell(row,col).string(userData.Taskname);col++;
+                    worksheet.cell(row,col).number(userData.TaskData.hours);col++;
+                    worksheet.cell(row,col).number(userData.TaskData.minutes);col++;
+                    row++;
+                }
+                if(userDataIndex==user.data.length-1 && index==users.length-1)
+                {
+                    while(true){
+                        if(mins>60){
+                            hours+=1;
+                            mins=mins-60;
+                        }else{
+                            col=1;
+                            worksheet.cell(row,col).string("Total hours");col++;
+                            worksheet.cell(row,col).number(hours);col++;
+                            row++;
+                            col=1;
+                            worksheet.cell(row,col).string("Total minutes");col++;
+                            worksheet.cell(row,col).number(mins);col++;        
+                            break;
+                        }
+                    }
+                }
+                if(userDataIndex==user.data.length-1 && index==users.length-1 && aDataIndex==adminData.length-1 )
+                {   
+                    console.log("called");
+                    workbook.write('REPORT_FROM_'+queryString.startDate+"_TO_"+queryString.endDate+"_FOR_"+queryString.filterParam+'.xlsx',function(err, stats) {
+                        if (err) {
+                          console.error(err);
+                        } else {
+                            res.send('REPORT_FROM_'+queryString.startDate+"_TO_"+queryString.endDate+"_FOR_"+queryString.filterParam+'.xlsx');
+                        }
+                      });
+                }   
+            });
+        }    
+    });
+});
+}
+
+
 router.route('/approver')
 .put(verifyToken,function(req,res){
     model.aggregate(JSON.parse(req.body.userCondition)).exec(function(err,data){
